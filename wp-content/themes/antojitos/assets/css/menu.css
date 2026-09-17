@@ -1,0 +1,626 @@
+/* =========================================================
+   ANTOJITOS EL CHINO
+   MENU PRINCIPAL
+   ========================================================= */
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+.aec-menu-v2,
+.aec-menu-v2 * {
+    box-sizing: border-box;
+}
+
+
+.aec-menu-v2 {
+    background:
+        radial-gradient(
+            circle at 8% 15%,
+            rgba(242, 181, 68, 0.13),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 92% 85%,
+            rgba(41, 76, 115, 0.08),
+            transparent 26%
+        ),
+        #fff4df;
+
+    color: #222222;
+    min-height: calc(100vh - 90px);
+    overflow: hidden;
+    padding: 64px 24px 72px;
+}
+
+
+.aec-menu-v2-hero {
+    margin: 0 auto;
+    max-width: 1160px;
+}
+
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+.aec-menu-v2-eyebrow {
+    color: #c63b32;
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+
+.aec-menu-v2 h1 {
+    color: #222222;
+    font-size: clamp(
+        48px,
+        6vw,
+        72px
+    );
+    font-weight: 900;
+    letter-spacing: -2px;
+    line-height: 1;
+    margin: 0;
+    text-align: center;
+}
+
+
+.aec-menu-v2-intro {
+    color: #625a50;
+    font-size: 17px;
+    line-height: 1.55;
+    margin: 18px auto 38px;
+    max-width: 620px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   GRID DE CATEGORIAS
+   ========================================================= */
+
+.aec-menu-v2-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+}
+
+
+/* =========================================================
+   TARJETAS
+   ========================================================= */
+
+.aec-menu-v2-card {
+    background: #ffffff;
+    border: 1px solid rgba(34, 34, 34, 0.08);
+    border-radius: 24px;
+    box-shadow:
+        0 10px 30px
+        rgba(34, 34, 34, 0.08);
+    color: inherit;
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transform: translateY(0);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+.aec-menu-v2-card:hover {
+    box-shadow:
+        0 20px 45px
+        rgba(34, 34, 34, 0.15);
+    transform: translateY(-7px);
+}
+
+
+/*
+ * Línea inferior de identidad.
+ */
+
+.aec-menu-v2-card::after {
+    bottom: 0;
+    content: "";
+    height: 6px;
+    left: 0;
+    position: absolute;
+    right: 0;
+
+    transition:
+        height 0.2s ease;
+}
+
+
+.aec-menu-v2-card:hover::after {
+    height: 8px;
+}
+
+
+.aec-menu-v2-card.is-food::after {
+    background: #c63b32;
+}
+
+
+.aec-menu-v2-card.is-drinks::after {
+    background: #294c73;
+}
+
+
+/* =========================================================
+   AREA DE IMAGEN
+   ========================================================= */
+
+.aec-menu-v2-media {
+    height: 245px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+/*
+ * Sombra inferior para que el badge tenga
+ * buen contraste sobre cualquier fotografía.
+ */
+
+.aec-menu-v2-media::after {
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.32),
+            transparent 55%
+        );
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1;
+}
+
+
+/* =========================================================
+   IMAGEN DE COMIDA
+   ========================================================= */
+
+/*
+ * En la fotografía de comida sí usamos cover
+ * porque el encuadre funciona correctamente.
+ */
+
+.aec-menu-v2-card.is-food
+.aec-menu-v2-media img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    transform: scale(1);
+    transition:
+        transform 0.5s ease;
+    width: 100%;
+}
+
+
+.aec-menu-v2-card.is-food:hover
+.aec-menu-v2-media img {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   IMAGEN DE BEBIDAS
+   ========================================================= */
+
+/*
+ * La fotografía de bebida debe mostrarse completa.
+ *
+ * NO usamos cover porque recortaba el vaso.
+ */
+
+.aec-menu-v2-card.is-drinks
+.aec-menu-v2-media {
+    align-items: center;
+    background: #ead7bd;
+    display: flex;
+    justify-content: center;
+}
+
+
+.aec-menu-v2-card.is-drinks
+.aec-menu-v2-media img {
+    display: block;
+    height: 100%;
+    object-fit: contain;
+    object-position: center center;
+    transform: scale(1);
+    transition:
+        transform 0.5s ease;
+    width: 100%;
+}
+
+
+.aec-menu-v2-card.is-drinks:hover
+.aec-menu-v2-media img {
+    transform: scale(1.035);
+}
+
+
+/* =========================================================
+   BADGE SOBRE IMAGEN
+   ========================================================= */
+
+.aec-menu-v2-badge {
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.93
+        );
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.70
+        );
+    border-radius: 999px;
+    bottom: 16px;
+    color: #222222;
+    font-size: 10px;
+    font-weight: 800;
+    left: 16px;
+    letter-spacing: 0.5px;
+    padding: 8px 11px;
+    position: absolute;
+    text-transform: uppercase;
+    z-index: 3;
+}
+
+
+/* =========================================================
+   CONTENIDO DE TARJETA
+   ========================================================= */
+
+.aec-menu-v2-content {
+    padding: 25px 27px 30px;
+}
+
+
+.aec-menu-v2-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+}
+
+
+.aec-menu-v2-card.is-food
+.aec-menu-v2-label {
+    color: #c63b32;
+}
+
+
+.aec-menu-v2-card.is-drinks
+.aec-menu-v2-label {
+    color: #294c73;
+}
+
+
+.aec-menu-v2-content h2 {
+    color: #222222;
+    font-size: 40px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin: 0 0 12px;
+}
+
+
+.aec-menu-v2-content p {
+    color: #655e55;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    min-height: 46px;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.aec-menu-v2-cta {
+    align-items: center;
+    display: inline-flex;
+    font-size: 14px;
+    font-weight: 900;
+    gap: 8px;
+    margin-top: 22px;
+}
+
+
+.aec-menu-v2-card.is-food
+.aec-menu-v2-cta {
+    color: #c63b32;
+}
+
+
+.aec-menu-v2-card.is-drinks
+.aec-menu-v2-cta {
+    color: #294c73;
+}
+
+
+.aec-menu-v2-arrow {
+    align-items: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    display: inline-flex;
+    height: 28px;
+    justify-content: center;
+    width: 28px;
+
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.aec-menu-v2-card:hover
+.aec-menu-v2-arrow {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+
+.aec-menu-v2-card.is-food:hover
+.aec-menu-v2-arrow {
+    background: #c63b32;
+}
+
+
+.aec-menu-v2-card.is-drinks:hover
+.aec-menu-v2-arrow {
+    background: #294c73;
+}
+
+
+/* =========================================================
+   PROCESO
+   ========================================================= */
+
+.aec-menu-v2-process {
+    align-items: center;
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.76
+        );
+    border:
+        1px solid
+        rgba(
+            34,
+            34,
+            34,
+            0.08
+        );
+    border-radius: 18px;
+    display: flex;
+    gap: 26px;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 16px 24px;
+}
+
+
+.aec-menu-v2-process-item {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+
+.aec-menu-v2-process-item
+> span {
+    align-items: center;
+    background: #222222;
+    border-radius: 50%;
+    color: #ffffff;
+    display: flex;
+    flex: 0 0 32px;
+    font-size: 11px;
+    font-weight: 900;
+    height: 32px;
+    justify-content: center;
+}
+
+
+.aec-menu-v2-process-item
+strong {
+    color: #222222;
+    display: block;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+
+.aec-menu-v2-process-item
+small {
+    color: #777068;
+    display: block;
+    font-size: 10px;
+    margin-top: 1px;
+}
+
+
+.aec-menu-v2-process-arrow {
+    color: #aaa198;
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   ACCESIBILIDAD
+   ========================================================= */
+
+.aec-menu-v2-card:focus-visible {
+    outline:
+        4px solid
+        rgba(
+            242,
+            181,
+            68,
+            0.70
+        );
+    outline-offset: 5px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .aec-menu-v2 {
+        padding-top: 52px;
+    }
+
+
+    .aec-menu-v2-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .aec-menu-v2-media {
+        height: 290px;
+    }
+
+
+    .aec-menu-v2-process {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+/* =========================================================
+   MOVIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .aec-menu-v2 {
+        padding:
+            42px
+            16px
+            55px;
+    }
+
+
+    .aec-menu-v2 h1 {
+        font-size: 45px;
+        letter-spacing: -1.5px;
+    }
+
+
+    .aec-menu-v2-intro {
+        font-size: 15px;
+        margin-bottom: 28px;
+    }
+
+
+    .aec-menu-v2-grid {
+        gap: 18px;
+    }
+
+
+    .aec-menu-v2-card {
+        border-radius: 18px;
+    }
+
+
+    .aec-menu-v2-media {
+        height: 215px;
+    }
+
+
+    .aec-menu-v2-content {
+        padding:
+            21px
+            20px
+            26px;
+    }
+
+
+    .aec-menu-v2-content h2 {
+        font-size: 34px;
+    }
+
+
+    .aec-menu-v2-content p {
+        font-size: 13px;
+        min-height: 0;
+    }
+
+
+    .aec-menu-v2-cta {
+        font-size: 13px;
+    }
+
+
+    .aec-menu-v2-process {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+
+    .aec-menu-v2-process-arrow {
+        display: none;
+    }
+
+}
+
+
+/* =========================================================
+   MOVILES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    .aec-menu-v2 h1 {
+        font-size: 39px;
+    }
+
+
+    .aec-menu-v2-media {
+        height: 190px;
+    }
+
+
+    .aec-menu-v2-content h2 {
+        font-size: 31px;
+    }
+
+}

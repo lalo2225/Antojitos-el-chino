@@ -1,0 +1,230 @@
+/* =========================================================
+   ANTOJITOS EL CHINO
+   COMPROBANTE DE TRANSFERENCIA
+   ========================================================= */
+
+
+.aec-transfer-proof-panel {
+    background: #fffaf1;
+    border: 1px solid
+        rgba(34, 34, 34, 0.10);
+    border-left: 5px solid #294c73;
+    border-radius: 16px;
+    box-sizing: border-box;
+    margin: 22px 0;
+    padding: 22px;
+}
+
+
+.aec-transfer-proof-panel[hidden] {
+    display: none !important;
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.aec-transfer-proof-eyebrow {
+    color: #294c73;
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+
+.aec-transfer-proof-heading h3 {
+    color: #222222;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 8px;
+}
+
+
+.aec-transfer-proof-heading p {
+    color: #555555;
+    line-height: 1.55;
+    margin:
+        0
+        0
+        18px;
+}
+
+
+/* =========================================================
+   DATOS BANCARIOS
+   ========================================================= */
+
+.aec-transfer-bank-data {
+    display: grid;
+    gap: 10px;
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+}
+
+
+.aec-transfer-bank-data > div {
+    background: #ffffff;
+    border: 1px solid
+        rgba(34, 34, 34, 0.08);
+    border-radius: 10px;
+    padding: 12px 14px;
+}
+
+
+.aec-transfer-bank-data span {
+    color: #777777;
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+
+.aec-transfer-bank-data strong {
+    color: #222222;
+    display: block;
+    font-size: 15px;
+    overflow-wrap: anywhere;
+}
+
+
+.aec-transfer-account {
+    grid-column:
+        1 / -1;
+}
+
+
+.aec-transfer-account strong {
+    color: #294c73;
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   INSTRUCCIONES
+   ========================================================= */
+
+.aec-transfer-instructions {
+    background: #ffffff;
+    border-radius: 9px;
+    color: #555555;
+    line-height: 1.5;
+    margin:
+        12px
+        0
+        0;
+    padding: 12px;
+}
+
+
+/* =========================================================
+   UPLOAD
+   ========================================================= */
+
+.aec-transfer-upload {
+    border-top: 1px solid
+        rgba(34, 34, 34, 0.10);
+    margin-top: 18px;
+    padding-top: 18px;
+}
+
+
+.aec-transfer-upload label {
+    color: #222222;
+    display: block;
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 8px;
+}
+
+
+.aec-transfer-upload label strong {
+    color: #c63b32;
+}
+
+
+.aec-transfer-upload input[type="file"] {
+    background: #ffffff;
+    border: 1px solid #dcdcde;
+    border-radius: 9px;
+    box-sizing: border-box;
+    padding: 10px;
+    width: 100%;
+}
+
+
+.aec-transfer-upload small {
+    color: #777777;
+    display: block;
+    margin-top: 6px;
+}
+
+
+/* =========================================================
+   ESTADO
+   ========================================================= */
+
+.aec-transfer-status {
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+
+.aec-transfer-status.is-loading {
+    background: #fff3cd;
+    color: #684d00;
+    padding: 10px;
+}
+
+
+.aec-transfer-status.is-success {
+    background: #e8f1e4;
+    color: #315325;
+    padding: 10px;
+}
+
+
+.aec-transfer-status.is-error,
+.aec-transfer-error {
+    background: #f8d7da;
+    border-radius: 8px;
+    color: #7c1c26;
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 12px;
+    padding: 10px;
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .aec-transfer-proof-panel {
+        border-radius: 12px;
+        padding: 17px;
+    }
+
+
+    .aec-transfer-bank-data {
+        grid-template-columns: 1fr;
+    }
+
+
+    .aec-transfer-account {
+        grid-column: auto;
+    }
+
+}

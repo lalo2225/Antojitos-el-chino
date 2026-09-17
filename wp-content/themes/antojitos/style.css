@@ -1,0 +1,1533 @@
+/*
+Theme Name: Antojitos el Chino
+Theme URI: http://localhost:8080
+Author: Antojitos el Chino
+Description: Tema personalizado para el sitio web y sistema de pedidos de Antojitos el Chino.
+Version: 1.0.0
+Text Domain: antojitos
+*/
+
+
+/* =========================================================
+   VARIABLES GENERALES
+   ========================================================= */
+
+:root {
+    --aec-rojo: #c63b32;
+    --aec-azul: #294c73;
+    --aec-amarillo: #f2b544;
+    --aec-crema: #fff4df;
+    --aec-carbon: #222222;
+    --aec-verde: #557a46;
+    --aec-blanco: #ffffff;
+    --aec-fondo-claro: #fffdf8;
+}
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--aec-crema);
+    color: var(--aec-carbon);
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.aec-header {
+    background: #ffffff;
+    border-bottom: 1px solid rgba(34, 34, 34, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.admin-bar .aec-header {
+    top: 32px;
+}
+
+.aec-header-inner {
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 78px;
+    padding: 8px 24px;
+}
+
+
+/* =========================================================
+   LOGO
+   ========================================================= */
+
+.aec-brand {
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.aec-site-logo {
+    margin: 0;
+}
+
+.aec-site-logo img {
+    display: block;
+    height: auto;
+    max-height: 62px;
+    max-width: 220px;
+    object-fit: contain;
+    width: auto;
+}
+
+
+/* =========================================================
+   NAVEGACIÓN
+   ========================================================= */
+
+.aec-nav {
+    margin-left: auto;
+}
+
+.aec-nav a {
+    color: var(--aec-carbon);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.aec-nav a:hover {
+    color: var(--aec-rojo);
+}
+
+.aec-header-actions {
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   BOTONES
+   ========================================================= */
+
+.aec-btn-primary .wp-block-button__link {
+    background: var(--aec-rojo);
+    border: none;
+    border-radius: 14px;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 13px 22px;
+    text-decoration: none;
+}
+
+.aec-btn-primary .wp-block-button__link:hover {
+    color: #ffffff;
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link {
+    border: 2px solid var(--aec-carbon);
+    border-radius: 14px;
+    color: var(--aec-carbon);
+    font-weight: 700;
+    padding: 11px 20px;
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover {
+    background: var(--aec-carbon);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   CONTENIDO PRINCIPAL
+   ========================================================= */
+
+.aec-main {
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.aec-hero {
+    background: var(--aec-crema);
+    padding: 70px 24px;
+}
+
+.aec-hero-columns {
+    align-items: center;
+    gap: 56px;
+}
+
+.aec-eyebrow {
+    color: var(--aec-rojo);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.aec-hero-title {
+    color: var(--aec-carbon);
+    font-size: clamp(44px, 6vw, 76px);
+    font-weight: 800;
+    letter-spacing: -2px;
+    line-height: 0.98;
+    margin: 14px 0 24px;
+    max-width: 720px;
+}
+
+.aec-hero-text {
+    color: var(--aec-carbon);
+    font-size: 19px;
+    line-height: 1.6;
+    max-width: 650px;
+}
+
+.aec-hero-actions {
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.aec-trust {
+    gap: 24px;
+    margin-top: 28px;
+}
+
+.aec-trust p {
+    color: var(--aec-carbon);
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0;
+}
+
+
+/* =========================================================
+   HERO - FOTOGRAFÍA PRINCIPAL
+   ========================================================= */
+
+.aec-hero-image-wrapper {
+    border-radius: 28px;
+    box-shadow:
+        0 24px 60px rgba(34, 34, 34, 0.16);
+    overflow: hidden;
+    position: relative;
+}
+
+.aec-hero-image {
+    margin: 0;
+    width: 100%;
+}
+
+.aec-hero-image img {
+    aspect-ratio: 4 / 3;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+}
+
+
+/* =========================================================
+   HERO - DISTINTIVO MAÍZ AZUL
+   ========================================================= */
+
+.aec-hero-badge {
+    background: var(--aec-azul);
+    border: 4px solid var(--aec-crema);
+    border-radius: 999px;
+    bottom: 20px;
+    box-shadow:
+        0 8px 24px rgba(34, 34, 34, 0.18);
+    color: #ffffff;
+    padding: 10px 18px;
+    position: absolute;
+    right: 20px;
+    z-index: 2;
+}
+
+.aec-hero-badge p {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    margin: 0;
+}
+
+
+/* =========================================================
+   SECCIONES GENERALES
+   ========================================================= */
+
+.aec-section {
+    box-sizing: border-box;
+    padding: 80px 24px;
+}
+
+.aec-section-light {
+    background: var(--aec-fondo-claro);
+}
+
+.aec-section > h2 {
+    color: var(--aec-carbon);
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.1;
+    margin-bottom: 12px;
+}
+
+.aec-section > p {
+    color: #666666;
+    font-size: 17px;
+    line-height: 1.6;
+    max-width: 700px;
+}
+
+
+/* =========================================================
+   ACCESO AL MENÚ EN HOME
+   ========================================================= */
+
+.aec-home-menu {
+    background: #ffffff;
+    text-align: center;
+}
+
+.aec-home-menu .aec-eyebrow {
+    text-align: center;
+}
+
+.aec-home-menu h2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aec-home-menu > p {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.aec-home-menu .wp-block-buttons {
+    justify-content: center;
+    margin-top: 24px;
+}
+
+
+/* =========================================================
+   CÓMO PEDIR
+   ========================================================= */
+
+.aec-section-light .wp-block-columns {
+    gap: 20px;
+    margin-top: 38px;
+}
+
+.aec-section-light .wp-block-column {
+    background: #ffffff;
+    border: 1px solid rgba(34, 34, 34, 0.08);
+    border-radius: 18px;
+    box-sizing: border-box;
+    padding: 28px;
+}
+
+.aec-section-light .wp-block-column h3 {
+    color: var(--aec-rojo);
+    font-size: 22px;
+    margin-top: 0;
+}
+
+.aec-section-light .wp-block-column p {
+    color: #555555;
+    line-height: 1.6;
+}
+
+.aec-section-light > .wp-block-buttons {
+    margin-top: 30px;
+}
+
+
+/* =========================================================
+   MODALIDADES DE PEDIDO
+   ========================================================= */
+
+.aec-order-modes {
+    background: var(--aec-amarillo);
+}
+
+.aec-order-modes .aec-eyebrow {
+    color: var(--aec-carbon);
+}
+
+.aec-order-modes .wp-block-columns {
+    gap: 24px;
+    margin-top: 34px;
+}
+
+.aec-mode-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow:
+        0 10px 28px rgba(34, 34, 34, 0.08);
+    box-sizing: border-box;
+    padding: 32px;
+}
+
+.aec-mode-card h3 {
+    color: var(--aec-carbon);
+    font-size: 26px;
+    margin-top: 0;
+}
+
+.aec-mode-card p {
+    color: #555555;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SECCIÓN MAÍZ AZUL
+   ========================================================= */
+
+.aec-blue-corn-section {
+    background: var(--aec-azul);
+    color: #ffffff;
+}
+
+.aec-blue-corn-section .aec-eyebrow {
+    color: var(--aec-amarillo);
+}
+
+.aec-blue-corn-section h2 {
+    color: #ffffff;
+}
+
+.aec-blue-corn-section > p {
+    color: rgba(255, 255, 255, 0.88);
+}
+
+.aec-blue-corn-section
+.aec-btn-primary
+.wp-block-button__link {
+    background: #ffffff;
+    color: var(--aec-azul);
+}
+
+.aec-blue-corn-section
+.aec-btn-primary
+.wp-block-button__link:hover {
+    color: var(--aec-azul);
+}
+
+
+/* =========================================================
+   CTA FINAL
+   ========================================================= */
+
+.aec-final-cta {
+    background: var(--aec-azul);
+    color: #ffffff;
+    padding: 80px 24px;
+    text-align: center;
+}
+
+.aec-final-cta h2 {
+    color: #ffffff;
+    font-size: clamp(34px, 5vw, 54px);
+    margin-bottom: 12px;
+}
+
+.aec-final-cta p {
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 18px;
+}
+
+.aec-final-cta .aec-btn-primary .wp-block-button__link {
+    background: var(--aec-rojo);
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.aec-footer {
+    background: var(--aec-carbon);
+    color: #ffffff;
+    padding: 50px 24px;
+}
+
+.aec-footer h3 {
+    color: #ffffff;
+}
+
+.aec-footer p {
+    color: rgba(255, 255, 255, 0.82);
+}
+
+
+/* =========================================================
+   PÁGINA PRINCIPAL MENÚ
+   ========================================================= */
+
+.aec-menu-main {
+    min-height: 70vh;
+    padding: 70px 24px 100px;
+}
+
+.aec-menu-main > h1 {
+    color: var(--aec-carbon);
+    font-size: clamp(44px, 7vw, 72px);
+    letter-spacing: -2px;
+    line-height: 1;
+    margin: 10px 0 18px;
+}
+
+.aec-menu-eyebrow {
+    color: var(--aec-rojo);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+.aec-menu-description {
+    color: #666666;
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 38px;
+    max-width: 600px;
+}
+
+
+/* =========================================================
+   SELECTOR COMIDA / BEBIDAS
+   ========================================================= */
+
+.aec-menu-selector-grid {
+    gap: 24px;
+    margin-top: 36px;
+}
+
+.aec-menu-choice {
+    border-radius: 24px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 360px;
+    padding: 38px;
+}
+
+.aec-menu-food {
+    background: var(--aec-rojo);
+    color: #ffffff;
+}
+
+.aec-menu-drinks {
+    background: var(--aec-azul);
+    color: #ffffff;
+}
+
+.aec-menu-choice h2,
+.aec-menu-choice h3 {
+    color: #ffffff;
+    font-size: clamp(36px, 5vw, 54px);
+    line-height: 1;
+    margin: 10px 0 16px;
+}
+
+.aec-menu-choice p {
+    color: #ffffff;
+    line-height: 1.6;
+    max-width: 450px;
+}
+
+.aec-menu-label {
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+.aec-menu-choice
+.wp-block-button__link {
+    background: #ffffff !important;
+    border-radius: 14px;
+    color: var(--aec-carbon) !important;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.aec-menu-choice
+.wp-block-button__link:hover {
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   PÁGINAS COMIDA / BEBIDAS
+   ========================================================= */
+
+.aec-page-menu {
+    min-height: 70vh;
+}
+
+.aec-category-hero {
+    border-radius: 0 0 32px 32px;
+    box-sizing: border-box;
+    color: #ffffff;
+    margin-bottom: 0;
+    padding: 70px 24px;
+}
+
+.aec-category-food {
+    background: var(--aec-rojo);
+}
+
+.aec-category-drinks {
+    background: var(--aec-azul);
+}
+
+.aec-category-hero h1 {
+    color: #ffffff;
+    font-size: clamp(44px, 7vw, 72px);
+    letter-spacing: -2px;
+    line-height: 1;
+    margin: 10px 0 18px;
+}
+
+.aec-category-hero > p {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 19px;
+    line-height: 1.6;
+    max-width: 650px;
+}
+
+.aec-category-eyebrow {
+    color: #ffffff !important;
+    font-size: 13px !important;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+}
+
+.aec-category-hero
+.wp-block-button.is-style-outline
+.wp-block-button__link {
+    border-color: #ffffff;
+    color: #ffffff;
+    margin-top: 18px;
+}
+
+.aec-category-hero
+.wp-block-button.is-style-outline
+.wp-block-button__link:hover {
+    background: #ffffff;
+    color: var(--aec-carbon);
+}
+
+
+/* =========================================================
+   SECCIÓN DE PRODUCTOS
+   ========================================================= */
+
+.aec-products-section {
+    background: var(--aec-crema);
+    box-sizing: border-box;
+    padding: 60px 24px 90px;
+}
+
+.aec-products-section
+.woocommerce
+ul.products {
+    display: grid;
+    gap: 24px;
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+    margin: 0;
+}
+
+.aec-products-section
+.woocommerce
+ul.products::before,
+.aec-products-section
+.woocommerce
+ul.products::after {
+    display: none;
+}
+
+.aec-products-section
+.woocommerce
+ul.products
+li.product {
+    background: #ffffff;
+    border: 1px solid rgba(34, 34, 34, 0.08);
+    border-radius: 20px;
+    box-shadow:
+        0 8px 30px rgba(34, 34, 34, 0.05);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    float: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 14px;
+    transition:
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+    width: 100%;
+}
+
+.aec-products-section
+.woocommerce
+ul.products
+li.product:hover {
+    box-shadow:
+        0 14px 35px rgba(34, 34, 34, 0.10);
+    transform: translateY(-3px);
+}
+
+.aec-products-section
+.woocommerce
+ul.products
+li.product
+img {
+    aspect-ratio: 1 / 1;
+    border-radius: 15px;
+    display: block;
+    margin-bottom: 12px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.aec-products-section
+.woocommerce-loop-product__title {
+    color: var(--aec-carbon);
+    font-size: 20px !important;
+    font-weight: 800;
+    line-height: 1.2;
+    padding: 4px 0 8px !important;
+}
+
+.aec-products-section
+.woocommerce
+.price {
+    color: var(--aec-rojo) !important;
+    font-size: 19px !important;
+    font-weight: 800 !important;
+    margin-bottom: 12px;
+}
+
+.aec-products-section
+.aec-elegir-producto {
+    margin-top: auto !important;
+}
+
+
+/* =========================================================
+   WOOCommerce - PRODUCTOS GENERALES
+   ========================================================= */
+
+.woocommerce ul.products li.product {
+    background: #ffffff;
+    border-radius: 18px;
+}
+
+.woocommerce ul.products li.product img {
+    border-radius: 14px;
+}
+
+.woocommerce ul.products li.product .price {
+    color: var(--aec-rojo);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.woocommerce ul.products li.product .button {
+    background: var(--aec-rojo);
+    border-radius: 12px;
+    color: #ffffff;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+}
+
+.woocommerce ul.products li.product .button:hover {
+    background: var(--aec-rojo);
+    color: #ffffff;
+    opacity: 0.92;
+}
+
+
+/* =========================================================
+   PRODUCTO INDIVIDUAL
+   ========================================================= */
+
+.single-product div.product {
+    padding-bottom: 70px;
+    padding-top: 50px;
+}
+
+.single-product div.product .product_title {
+    color: var(--aec-carbon);
+    font-size: clamp(34px, 5vw, 52px);
+    line-height: 1.05;
+}
+
+.single-product div.product .price {
+    color: var(--aec-rojo);
+    font-size: 26px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .aec-products-section
+    .woocommerce
+    ul.products {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .aec-hero-columns {
+        gap: 36px;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MÓVIL
+   ========================================================= */
+
+@media (max-width: 782px) {
+
+    .admin-bar .aec-header {
+        top: 46px;
+    }
+
+    .aec-header-inner {
+        min-height: 66px;
+        padding: 8px 18px;
+    }
+
+    .aec-site-logo img {
+        max-height: 48px;
+        max-width: 155px;
+    }
+
+    .aec-header-actions {
+        display: none;
+    }
+
+
+    /* HERO */
+
+    .aec-hero {
+        padding: 48px 18px 55px;
+    }
+
+    .aec-hero-columns {
+        gap: 30px;
+    }
+
+    .aec-hero-title {
+        font-size: 46px;
+        letter-spacing: -1px;
+    }
+
+    .aec-hero-text {
+        font-size: 17px;
+    }
+
+    .aec-hero-image-wrapper {
+        border-radius: 22px;
+    }
+
+    .aec-hero-image img {
+        aspect-ratio: 4 / 3;
+    }
+
+    .aec-hero-badge {
+        bottom: 12px;
+        right: 12px;
+    }
+
+    .aec-trust {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+
+    /* SECCIONES */
+
+    .aec-section {
+        padding: 55px 18px;
+    }
+
+    .aec-final-cta {
+        padding: 60px 18px;
+    }
+
+
+    /* MENÚ */
+
+    .aec-menu-main {
+        padding: 45px 18px 70px;
+    }
+
+    .aec-menu-main > h1 {
+        letter-spacing: -1px;
+    }
+
+    .aec-menu-selector-grid {
+        gap: 16px;
+    }
+
+    .aec-menu-choice {
+        min-height: 260px;
+        padding: 28px;
+    }
+
+
+    /* COMIDA / BEBIDAS */
+
+    .aec-category-hero {
+        border-radius: 0 0 24px 24px;
+        padding: 50px 18px;
+    }
+
+    .aec-category-hero h1 {
+        font-size: 44px;
+        letter-spacing: -1px;
+    }
+
+    .aec-category-hero > p {
+        font-size: 16px;
+    }
+
+    .aec-products-section {
+        padding: 35px 14px 60px;
+    }
+
+    .aec-products-section
+    .woocommerce
+    ul.products {
+        gap: 14px;
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .aec-products-section
+    .woocommerce
+    ul.products
+    li.product {
+        border-radius: 16px;
+        padding: 9px;
+    }
+
+    .aec-products-section
+    .woocommerce
+    ul.products
+    li.product
+    img {
+        border-radius: 12px;
+    }
+
+    .aec-products-section
+    .woocommerce-loop-product__title {
+        font-size: 16px !important;
+    }
+
+    .aec-products-section
+    .woocommerce
+    .price {
+        font-size: 16px !important;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - TELÉFONOS PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .aec-site-logo img {
+        max-height: 44px;
+        max-width: 135px;
+    }
+
+    .aec-hero-title {
+        font-size: 40px;
+    }
+
+    .aec-hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .aec-hero-actions .wp-block-button {
+        width: 100%;
+    }
+
+    .aec-hero-actions
+    .wp-block-button__link {
+        box-sizing: border-box;
+        text-align: center;
+        width: 100%;
+    }
+
+    .aec-hero-badge {
+        border-width: 3px;
+        font-size: 12px;
+        padding: 8px 13px;
+    }
+
+    .aec-hero-badge p {
+        font-size: 12px;
+    }
+
+    .aec-menu-choice {
+        min-height: 230px;
+        padding: 24px;
+    }
+
+    .aec-mode-card {
+        padding: 24px;
+    }
+}
+/* =========================================================
+   ANTOJITOS EL CHINO
+   MENÚ PRINCIPAL V2
+   ========================================================= */
+
+
+/* =========================================================
+   PÁGINA
+   ========================================================= */
+
+.aec-menu-v2 {
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(242, 181, 68, 0.10),
+            transparent 22%
+        ),
+        radial-gradient(
+            circle at 92% 80%,
+            rgba(41, 76, 115, 0.08),
+            transparent 24%
+        ),
+        #fff4df;
+    box-sizing: border-box;
+    min-height: 700px;
+    overflow: hidden;
+    padding: 72px 24px 80px;
+}
+
+
+.aec-menu-v2-hero {
+    margin: 0 auto;
+    max-width: 1160px;
+}
+
+
+/* =========================================================
+   INTRO
+   ========================================================= */
+
+.aec-menu-v2-eyebrow {
+    color: #c63b32;
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 11px;
+    text-align: center;
+}
+
+
+.aec-menu-v2 h1 {
+    color: #222222;
+    font-size: clamp(
+        44px,
+        6vw,
+        76px
+    );
+    font-weight: 900;
+    letter-spacing: -2.5px;
+    line-height: 0.98;
+    margin: 0;
+    text-align: center;
+}
+
+
+.aec-menu-v2-intro {
+    color: #5e554a;
+    font-size: 17px;
+    line-height: 1.55;
+    margin: 21px auto 42px;
+    max-width: 600px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.aec-menu-v2-grid {
+    display: grid;
+    gap: 24px;
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+}
+
+
+/* =========================================================
+   TARJETA
+   ========================================================= */
+
+.aec-menu-v2-card {
+    background: #ffffff;
+    border: 1px solid
+        rgba(34, 34, 34, 0.08);
+    border-radius: 24px;
+    box-shadow:
+        0 10px 35px
+        rgba(34, 34, 34, 0.08);
+    color: inherit;
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    position: relative;
+    text-decoration: none;
+    transform: translateY(0);
+    transition:
+        box-shadow 0.28s ease,
+        transform 0.28s ease;
+}
+
+
+.aec-menu-v2-card:hover {
+    box-shadow:
+        0 20px 48px
+        rgba(34, 34, 34, 0.14);
+    transform: translateY(-8px);
+}
+
+
+/* Línea de identidad */
+
+.aec-menu-v2-card::after {
+    bottom: 0;
+    content: "";
+    height: 6px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    transition:
+        height 0.22s ease;
+}
+
+
+.aec-menu-v2-card.is-food::after {
+    background: #c63b32;
+}
+
+
+.aec-menu-v2-card.is-drinks::after {
+    background: #294c73;
+}
+
+
+.aec-menu-v2-card:hover::after {
+    height: 8px;
+}
+
+
+/* =========================================================
+   IMAGEN
+   ========================================================= */
+
+.aec-menu-v2-media {
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+
+
+.aec-menu-v2-media::after {
+    background:
+        linear-gradient(
+            to top,
+            rgba(0, 0, 0, 0.34),
+            transparent 55%
+        );
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+
+.aec-menu-v2-media img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.01);
+    transition:
+        transform 0.55s
+        cubic-bezier(
+            0.2,
+            0.7,
+            0.2,
+            1
+        );
+    width: 100%;
+}
+
+
+.aec-menu-v2-card:hover
+.aec-menu-v2-media img {
+    transform: scale(1.075);
+}
+
+
+/* =========================================================
+   BADGE SOBRE IMAGEN
+   ========================================================= */
+
+.aec-menu-v2-badge {
+    backdrop-filter: blur(7px);
+    background:
+        rgba(255, 255, 255, 0.92);
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.70);
+    border-radius: 999px;
+    bottom: 17px;
+    color: #222222;
+    font-size: 10px;
+    font-weight: 800;
+    left: 17px;
+    letter-spacing: 0.5px;
+    padding: 8px 11px;
+    position: absolute;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+.aec-menu-v2-content {
+    box-sizing: border-box;
+    min-height: 250px;
+    padding: 27px 29px 32px;
+}
+
+
+.aec-menu-v2-label {
+    display: block;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+}
+
+
+.aec-menu-v2-card.is-food
+.aec-menu-v2-label {
+    color: #c63b32;
+}
+
+
+.aec-menu-v2-card.is-drinks
+.aec-menu-v2-label {
+    color: #294c73;
+}
+
+
+.aec-menu-v2-content h2 {
+    color: #222222;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: -1px;
+    line-height: 1;
+    margin: 0 0 13px;
+}
+
+
+.aec-menu-v2-content p {
+    color: #625b52;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 430px;
+}
+
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.aec-menu-v2-cta {
+    align-items: center;
+    display: inline-flex;
+    font-size: 13px;
+    font-weight: 900;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+
+.aec-menu-v2-card.is-food
+.aec-menu-v2-cta {
+    color: #c63b32;
+}
+
+
+.aec-menu-v2-card.is-drinks
+.aec-menu-v2-cta {
+    color: #294c73;
+}
+
+
+.aec-menu-v2-arrow {
+    align-items: center;
+    border:
+        1px solid
+        currentColor;
+    border-radius: 50%;
+    display: inline-flex;
+    height: 27px;
+    justify-content: center;
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.22s ease;
+    width: 27px;
+}
+
+
+.aec-menu-v2-card:hover
+.aec-menu-v2-arrow {
+    color: #ffffff;
+    transform: translateX(5px);
+}
+
+
+.aec-menu-v2-card.is-food:hover
+.aec-menu-v2-arrow {
+    background: #c63b32;
+}
+
+
+.aec-menu-v2-card.is-drinks:hover
+.aec-menu-v2-arrow {
+    background: #294c73;
+}
+
+
+/* =========================================================
+   PROCESO
+   ========================================================= */
+
+.aec-menu-v2-process {
+    align-items: center;
+    background:
+        rgba(255, 255, 255, 0.68);
+    border:
+        1px solid
+        rgba(34, 34, 34, 0.08);
+    border-radius: 18px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    margin-top: 34px;
+    padding: 17px 25px;
+}
+
+
+.aec-menu-v2-process-item {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+
+.aec-menu-v2-process-item
+> span {
+    align-items: center;
+    background: #222222;
+    border-radius: 50%;
+    color: #ffffff;
+    display: inline-flex;
+    flex: 0 0 31px;
+    font-size: 11px;
+    font-weight: 900;
+    height: 31px;
+    justify-content: center;
+}
+
+
+.aec-menu-v2-process-item
+strong {
+    color: #222222;
+    display: block;
+    font-size: 12px;
+    font-weight: 900;
+}
+
+
+.aec-menu-v2-process-item
+small {
+    color: #777068;
+    display: block;
+    font-size: 10px;
+    margin-top: 1px;
+}
+
+
+.aec-menu-v2-process-arrow {
+    color: #a19a91;
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   FOCUS / ACCESIBILIDAD
+   ========================================================= */
+
+.aec-menu-v2-card:focus-visible {
+    outline:
+        4px solid
+        rgba(242, 181, 68, 0.65);
+    outline-offset: 5px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .aec-menu-v2 {
+        padding-top: 55px;
+    }
+
+
+    .aec-menu-v2-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .aec-menu-v2-media {
+        height: 300px;
+    }
+
+
+    .aec-menu-v2-process {
+        flex-wrap: wrap;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .aec-menu-v2 {
+        padding:
+            42px
+            16px
+            60px;
+    }
+
+
+    .aec-menu-v2 h1 {
+        font-size: 47px;
+        letter-spacing: -1.7px;
+    }
+
+
+    .aec-menu-v2-intro {
+        font-size: 15px;
+        margin-bottom: 30px;
+    }
+
+
+    .aec-menu-v2-grid {
+        gap: 18px;
+    }
+
+
+    .aec-menu-v2-card {
+        border-radius: 19px;
+    }
+
+
+    .aec-menu-v2-media {
+        height: 220px;
+    }
+
+
+    .aec-menu-v2-content {
+        min-height: auto;
+        padding:
+            22px
+            21px
+            27px;
+    }
+
+
+    .aec-menu-v2-content h2 {
+        font-size: 35px;
+    }
+
+
+    .aec-menu-v2-process {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 13px;
+    }
+
+
+    .aec-menu-v2-process-arrow {
+        display: none;
+    }
+
+}

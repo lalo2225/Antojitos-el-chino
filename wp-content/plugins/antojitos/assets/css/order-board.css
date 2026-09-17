@@ -1,0 +1,1097 @@
+/* =========================================================
+   ANTOJITOS EL CHINO
+   PANTALLA OPERATIVA DE PEDIDOS
+   ========================================================= */
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+   ========================================================= */
+
+.aec-order-board-page {
+    margin-right: 20px;
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.aec-board-topbar {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #dcdcde;
+    border-radius: 16px;
+    display: flex;
+    gap: 24px;
+    justify-content: space-between;
+    margin: 20px 0;
+    padding: 20px 24px;
+}
+
+
+.aec-board-eyebrow {
+    color: #c63b32;
+    display: block;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+
+.aec-board-topbar h1 {
+    color: #222222;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+}
+
+
+.aec-board-topbar p {
+    color: #646970;
+    margin: 6px 0 0;
+}
+
+
+/* =========================================================
+   ACCIONES DEL ENCABEZADO
+   ========================================================= */
+
+.aec-board-topbar-actions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+
+.aec-board-updated {
+    color: #646970;
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   BOTÓN DE SONIDO
+   ========================================================= */
+
+.aec-board-sound-button {
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        color 0.2s ease;
+}
+
+
+.aec-board-sound-button.is-active {
+    background: #557a46 !important;
+    border-color: #557a46 !important;
+    color: #ffffff !important;
+}
+
+
+.aec-board-sound-button.is-active:hover,
+.aec-board-sound-button.is-active:focus {
+    background: #46683a !important;
+    border-color: #46683a !important;
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   TABLERO
+   ========================================================= */
+
+.aec-order-board {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    transition: opacity 0.15s ease;
+}
+
+
+.aec-order-board.is-refreshing {
+    opacity: 0.72;
+}
+
+
+/* =========================================================
+   SECCIONES DEL TABLERO
+   ========================================================= */
+
+.aec-board-section {
+    background: #ffffff;
+    border: 1px solid #dcdcde;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+
+.aec-board-section-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 18px;
+}
+
+
+.aec-board-section-header h2 {
+    font-size: 18px;
+    font-weight: 800;
+    margin: 0;
+}
+
+
+.aec-board-count {
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 999px;
+    display: inline-flex;
+    font-size: 13px;
+    font-weight: 800;
+    height: 30px;
+    justify-content: center;
+    min-width: 30px;
+    padding: 0 8px;
+}
+
+
+/* =========================================================
+   SECCIÓN: URGENTES / ATRASADOS
+   ========================================================= */
+
+.aec-board-section-urgent
+.aec-board-section-header {
+    background: #f8d7da;
+    color: #7c1c26;
+}
+
+
+/* =========================================================
+   SECCIÓN: PRÓXIMOS
+   ========================================================= */
+
+.aec-board-section-soon
+.aec-board-section-header {
+    background: #fff3cd;
+    color: #684d00;
+}
+
+
+/* =========================================================
+   SECCIÓN: COMER AQUÍ
+   ========================================================= */
+
+.aec-board-section-dine
+.aec-board-section-header {
+    background: #e8f1e4;
+    color: #315325;
+}
+
+
+/* =========================================================
+   SECCIÓN: LISTOS
+   ========================================================= */
+
+.aec-board-section-ready
+.aec-board-section-header {
+    background: #dfeef8;
+    color: #294c73;
+}
+
+
+/* =========================================================
+   SECCIÓN: REQUIEREN REVISIÓN
+   ========================================================= */
+
+.aec-board-section-review
+.aec-board-section-header {
+    background: #eeeef0;
+    color: #50575e;
+}
+
+
+/* =========================================================
+   GRID DE PEDIDOS
+   ========================================================= */
+
+.aec-board-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns:
+        repeat(
+            auto-fill,
+            minmax(300px, 1fr)
+        );
+    padding: 16px;
+}
+
+
+.aec-board-empty {
+    color: #646970;
+    font-size: 14px;
+    padding: 22px;
+    text-align: center;
+}
+
+
+/* =========================================================
+   TARJETA DEL PEDIDO
+   ========================================================= */
+
+.aec-board-card {
+    background: #ffffff;
+    border: 1px solid #dcdcde;
+    border-radius: 14px;
+    box-shadow:
+        0 3px 10px
+        rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.aec-board-card-urgent {
+    border-left: 5px solid #c63b32;
+}
+
+
+.aec-board-card-soon {
+    border-left: 5px solid #f2b544;
+}
+
+
+.aec-board-card-dine {
+    border-left: 5px solid #557a46;
+}
+
+
+.aec-board-card-ready {
+    border-left: 5px solid #294c73;
+}
+
+
+.aec-board-card-review {
+    border-left: 5px solid #8c8f94;
+}
+
+
+/* =========================================================
+   TARJETA: PEDIDO NUEVO
+   ========================================================= */
+
+.aec-board-card.is-new {
+    animation:
+        aec-board-new-order
+        1.1s
+        ease-in-out
+        3;
+    border-color: #c63b32;
+    box-shadow:
+        0 0 0 3px
+        rgba(198, 59, 50, 0.14),
+        0 8px 24px
+        rgba(34, 34, 34, 0.12);
+}
+
+
+/* =========================================================
+   ANIMACIÓN DE PEDIDO NUEVO
+   ========================================================= */
+
+@keyframes aec-board-new-order {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.015);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+/* =========================================================
+   ENCABEZADO DE TARJETA
+   ========================================================= */
+
+.aec-board-card-header {
+    align-items: flex-start;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+
+.aec-board-card-header > div {
+    min-width: 0;
+}
+
+
+.aec-board-order-number {
+    color: #222222;
+    display: block;
+    font-size: 19px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+
+.aec-board-order-number:hover {
+    color: #c63b32;
+}
+
+
+.aec-board-created {
+    color: #646970;
+    display: block;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   ETIQUETA DE MODALIDAD
+   ========================================================= */
+
+.aec-board-type {
+    border-radius: 999px;
+    display: inline-block;
+    flex: 0 0 auto;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 6px 9px;
+    white-space: nowrap;
+}
+
+
+.aec-board-type.is-pickup {
+    background: #e2edf8;
+    color: #294c73;
+}
+
+
+.aec-board-type.is-dine {
+    background: #e8f1e4;
+    color: #315325;
+}
+
+
+/* =========================================================
+   ETIQUETA "NUEVO"
+   ========================================================= */
+
+.aec-board-new-label {
+    background: #c63b32;
+    border-radius: 999px;
+    color: #ffffff;
+    flex: 0 0 auto;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-left: auto;
+    padding: 6px 9px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   ESTADO Y HORA
+   ========================================================= */
+
+.aec-board-status-row {
+    align-items: center;
+    background: #fafafa;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+
+.aec-board-status {
+    color: #50575e;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+.aec-board-pickup-time {
+    color: #294c73;
+    flex: 0 0 auto;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   PRIORIDAD
+   ========================================================= */
+
+.aec-board-priority {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    padding: 9px 15px;
+}
+
+
+.aec-board-priority strong {
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+
+.aec-board-priority span {
+    font-size: 12px;
+    font-weight: 700;
+    text-align: right;
+}
+
+
+/* ---------------------------------------------------------
+   ATRASADO
+   --------------------------------------------------------- */
+
+.aec-board-priority-overdue {
+    background: #f8d7da;
+    color: #7c1c26;
+}
+
+
+/* ---------------------------------------------------------
+   URGENTE
+   --------------------------------------------------------- */
+
+.aec-board-priority-urgent {
+    background: #ffe2bd;
+    color: #8a3d00;
+}
+
+
+/* ---------------------------------------------------------
+   PRÓXIMO
+   --------------------------------------------------------- */
+
+.aec-board-priority-soon {
+    background: #fff3cd;
+    color: #684d00;
+}
+
+
+/* ---------------------------------------------------------
+   PROGRAMADO
+   --------------------------------------------------------- */
+
+.aec-board-priority-scheduled {
+    background: #eeeeee;
+    color: #50575e;
+}
+
+
+/* ---------------------------------------------------------
+   SIN HORA
+   --------------------------------------------------------- */
+
+.aec-board-priority-missing {
+    background: #f8d7da;
+    color: #7c1c26;
+}
+
+
+/* ---------------------------------------------------------
+   FINALIZADO
+   --------------------------------------------------------- */
+
+.aec-board-priority-closed {
+    background: #e8f1e4;
+    color: #315325;
+}
+
+
+/* =========================================================
+   PRODUCTOS
+   ========================================================= */
+
+.aec-board-items {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0;
+}
+
+
+.aec-board-item {
+    border-bottom: 1px solid #eeeeee;
+    padding: 14px 15px;
+}
+
+
+.aec-board-item:last-child {
+    border-bottom: 0;
+}
+
+
+.aec-board-item-main {
+    align-items: baseline;
+    display: flex;
+    gap: 6px;
+}
+
+
+.aec-board-item-main strong {
+    color: #222222;
+    font-size: 16px;
+    line-height: 1.35;
+}
+
+
+.aec-board-item-qty {
+    color: #c63b32;
+    flex: 0 0 auto;
+    font-size: 17px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   PERSONALIZACIÓN DEL PRODUCTO
+   ========================================================= */
+
+.aec-board-item-meta {
+    color: #50575e;
+    font-size: 12px;
+    line-height: 1.55;
+    margin-top: 7px;
+}
+
+
+.aec-board-item-meta p {
+    margin: 0;
+}
+
+
+.aec-board-item-meta strong {
+    color: #222222;
+}
+
+
+.aec-board-item-meta ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.aec-board-item-meta li {
+    margin: 2px 0;
+}
+
+
+.aec-board-no-items {
+    color: #646970;
+    margin: 0;
+    padding: 15px;
+}
+
+
+/* =========================================================
+   FOOTER DE TARJETA
+   ========================================================= */
+
+.aec-board-card-footer {
+    align-items: center;
+    background: #fafafa;
+    border-top: 1px solid #eeeeee;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: auto;
+    padding: 12px 15px;
+}
+
+
+.aec-board-payment {
+    color: #646970;
+    font-size: 11px;
+    line-height: 1.35;
+    max-width: 45%;
+}
+
+
+/* =========================================================
+   BOTÓN DE ACCIÓN DEL PEDIDO
+   ========================================================= */
+
+.aec-board-action-button {
+    background: #c63b32;
+    border-radius: 7px;
+    color: #ffffff !important;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 8px 11px;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+
+.aec-board-action-button:hover,
+.aec-board-action-button:focus {
+    background: #ad3028;
+    color: #ffffff !important;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   ERROR DE ACTUALIZACIÓN
+   ========================================================= */
+
+.aec-board-error {
+    background: #f8d7da;
+    border: 1px solid #e5a6ac;
+    border-radius: 10px;
+    color: #7c1c26;
+    margin-top: 16px;
+    padding: 12px 15px;
+}
+
+
+/* =========================================================
+   PANTALLA COMPLETA
+   ========================================================= */
+
+:fullscreen
+.aec-order-board-page {
+    background: #f0f0f1;
+    box-sizing: border-box;
+    height: 100vh;
+    margin: 0;
+    overflow: auto;
+    padding: 20px;
+    width: 100%;
+}
+
+
+:fullscreen
+#adminmenumain,
+:fullscreen
+#wpadminbar,
+:fullscreen
+#wpfooter {
+    display: none !important;
+}
+
+
+:fullscreen
+#wpcontent {
+    margin-left: 0 !important;
+}
+
+
+:fullscreen
+#wpbody-content {
+    padding-bottom: 0;
+}
+
+
+/* =========================================================
+   ACCESIBILIDAD
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .aec-board-card,
+    .aec-board-action-button,
+    .aec-board-sound-button {
+        transition: none;
+    }
+
+
+    .aec-board-card.is-new {
+        animation: none;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .aec-board-topbar {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .aec-board-topbar-actions {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+
+    .aec-board-grid {
+        grid-template-columns:
+            repeat(
+                auto-fill,
+                minmax(270px, 1fr)
+            );
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 782px) {
+
+    .aec-order-board-page {
+        margin-right: 10px;
+    }
+
+
+    .aec-board-topbar {
+        border-radius: 12px;
+        margin-top: 12px;
+        padding: 18px;
+    }
+
+
+    .aec-board-topbar h1 {
+        font-size: 26px;
+    }
+
+
+    .aec-board-topbar-actions {
+        align-items: stretch;
+        display: grid;
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .aec-board-updated {
+        align-self: center;
+        grid-column: 1 / -1;
+    }
+
+
+    .aec-board-topbar-actions .button {
+        margin: 0;
+        text-align: center;
+    }
+
+
+    .aec-board-grid {
+        grid-template-columns: 1fr;
+        padding: 12px;
+    }
+
+
+    .aec-board-section {
+        border-radius: 12px;
+    }
+
+
+    .aec-board-card {
+        border-radius: 12px;
+    }
+
+
+    .aec-board-order-number {
+        font-size: 18px;
+    }
+
+
+    .aec-board-pickup-time {
+        font-size: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .aec-order-board-page {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
+
+    .aec-board-topbar {
+        padding: 15px;
+    }
+
+
+    .aec-board-topbar-actions {
+        grid-template-columns: 1fr;
+    }
+
+
+    .aec-board-updated {
+        grid-column: auto;
+    }
+
+
+    .aec-board-section-header {
+        padding: 13px 14px;
+    }
+
+
+    .aec-board-section-header h2 {
+        font-size: 16px;
+    }
+
+
+    .aec-board-grid {
+        gap: 11px;
+        padding: 10px;
+    }
+
+
+    .aec-board-card-header {
+        flex-wrap: wrap;
+        padding: 13px;
+    }
+
+
+    .aec-board-new-label {
+        order: 3;
+    }
+
+
+    .aec-board-status-row {
+        padding: 9px 13px;
+    }
+
+
+    .aec-board-priority {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 3px;
+        padding: 9px 13px;
+    }
+
+
+    .aec-board-priority span {
+        text-align: left;
+    }
+
+
+    .aec-board-item {
+        padding: 13px;
+    }
+
+
+    .aec-board-card-footer {
+        align-items: stretch;
+        flex-direction: column;
+        padding: 12px 13px;
+    }
+
+
+    .aec-board-payment {
+        max-width: none;
+    }
+
+
+    .aec-board-action-button {
+        box-sizing: border-box;
+        padding: 10px 12px;
+        width: 100%;
+    }
+
+}
+/* =========================================================
+   CLIENTE / NOMBRE DEL PEDIDO
+   ========================================================= */
+
+.aec-board-customer {
+    background: #fffaf1;
+    border: 1px solid rgba(41, 76, 115, 0.12);
+    border-left: 4px solid #294c73;
+    border-radius: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin: 14px 0;
+    padding: 12px 14px;
+}
+
+
+.aec-board-customer-label {
+    color: #77736c;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+
+.aec-board-customer-name {
+    color: #222222;
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.15;
+    text-transform: uppercase;
+}
+
+
+.aec-board-customer-phone {
+    color: #294c73;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 3px;
+    text-decoration: none;
+    width: fit-content;
+}
+
+
+.aec-board-customer-phone:hover {
+    color: #c63b32;
+    text-decoration: underline;
+}
+
+
+@media (max-width: 600px) {
+
+    .aec-board-customer {
+        padding: 11px 12px;
+    }
+
+
+    .aec-board-customer-name {
+        font-size: 19px;
+    }
+
+}
+/* =========================================================
+   CLIENTE / IDENTIFICACIÓN DEL PEDIDO
+   ========================================================= */
+
+.aec-board-customer {
+    background: #fffaf1;
+    border: 1px solid rgba(41, 76, 115, 0.12);
+    border-left: 4px solid #294c73;
+    border-radius: 11px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    margin: 14px 0;
+    padding: 12px 14px;
+}
+
+
+/* Título pequeño */
+
+.aec-board-customer-label {
+    color: #77736c;
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.85px;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+
+/* Nombre */
+
+.aec-board-customer-name {
+    color: #222222;
+    display: block;
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.15;
+    overflow-wrap: anywhere;
+    text-transform: uppercase;
+}
+
+
+/* Teléfono */
+
+.aec-board-customer-phone {
+    color: #294c73;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 4px;
+    text-decoration: none;
+    width: fit-content;
+
+    transition:
+        color 0.18s ease;
+}
+
+
+.aec-board-customer-phone:hover {
+    color: #c63b32;
+    text-decoration: underline;
+}
+
+
+.aec-board-customer-phone:focus-visible {
+    outline: 3px solid rgba(242, 181, 68, 0.55);
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .aec-board-customer {
+        margin: 12px 0;
+        padding: 11px 12px;
+    }
+
+
+    .aec-board-customer-name {
+        font-size: 19px;
+    }
+
+
+    .aec-board-customer-phone {
+        font-size: 13px;
+    }
+
+}

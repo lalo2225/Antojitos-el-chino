@@ -1,0 +1,906 @@
+/* =========================================================
+   ANTOJITOS EL CHINO
+   PAGINA COMIDA
+   ========================================================= */
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+.aec-comida-page,
+.aec-comida-page *,
+.aec-comida-products,
+.aec-comida-products * {
+    box-sizing: border-box;
+}
+
+
+.aec-comida-page {
+    background: #fff4df;
+    color: #222222;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.aec-comida-hero {
+    background: #fff4df;
+    padding: 0 24px;
+}
+
+
+.aec-comida-hero-inner {
+    background:
+        radial-gradient(
+            circle at 90% 30%,
+            rgba(255, 255, 255, 0.14),
+            transparent 22%
+        ),
+        #e72c21;
+
+    border-radius: 0 0 30px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin: 0 auto;
+
+    max-width: 1200px;
+
+    min-height: 310px;
+
+    overflow: hidden;
+
+    padding:
+        48px
+        44px
+        44px;
+
+    position: relative;
+}
+
+
+/* =========================================================
+   HERO - TEXTO
+   ========================================================= */
+
+.aec-comida-hero-copy {
+    max-width: 720px;
+    position: relative;
+    z-index: 2;
+}
+
+
+.aec-comida-eyebrow {
+    color: #ffffff;
+
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 14px;
+}
+
+
+.aec-comida-hero h1 {
+    color: #ffffff;
+
+    font-size:
+        clamp(
+            46px,
+            5vw,
+            66px
+        );
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    line-height: 0.98;
+
+    margin:
+        0
+        0
+        18px;
+}
+
+
+.aec-comida-hero p {
+    color:
+        rgba(
+            255,
+            255,
+            255,
+            0.92
+        );
+
+    font-size: 17px;
+
+    line-height: 1.55;
+
+    margin: 0;
+
+    max-width: 620px;
+}
+
+
+/* =========================================================
+   BOTON VOLVER
+   ========================================================= */
+
+.aec-comida-back {
+    align-items: center;
+
+    border:
+        2px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.90
+        );
+
+    border-radius: 14px;
+
+    color: #ffffff;
+
+    display: inline-flex;
+
+    font-size: 14px;
+
+    font-weight: 800;
+
+    gap: 8px;
+
+    margin-top: 28px;
+
+    padding:
+        11px
+        17px;
+
+    text-decoration: none;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.aec-comida-back:hover {
+    background: #ffffff;
+
+    color: #e72c21;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   DECORACION HERO
+   ========================================================= */
+
+.aec-comida-decoration {
+    align-items: center;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    opacity: 0.12;
+
+    padding-left: 30px;
+
+    pointer-events: none;
+
+    position: relative;
+
+    user-select: none;
+
+    z-index: 1;
+}
+
+
+.aec-comida-decoration-big {
+    color: #ffffff;
+
+    font-size: 180px;
+
+    font-weight: 900;
+
+    letter-spacing: -20px;
+
+    line-height: 0.72;
+}
+
+
+.aec-comida-decoration-small {
+    color: #ffffff;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
+    margin-top: 15px;
+}
+
+
+/* =========================================================
+   SECCION PRODUCTOS
+   ========================================================= */
+
+.aec-comida-products {
+    background: #fff4df;
+
+    margin: 0 !important;
+
+    max-width: none !important;
+
+    padding:
+        42px
+        24px
+        80px;
+}
+
+
+.aec-comida-products
+> * {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+
+/* =========================================================
+   CABECERA PRODUCTOS
+   ========================================================= */
+
+.aec-comida-products-heading {
+    align-items: flex-end;
+
+    display: flex;
+
+    gap: 30px;
+
+    justify-content: space-between;
+
+    margin-bottom: 27px !important;
+}
+
+
+.aec-comida-products-heading
+span {
+    color: #c63b32;
+
+    display: block;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    letter-spacing: 1.8px;
+
+    margin-bottom: 7px;
+}
+
+
+.aec-comida-products-heading
+h2 {
+    color: #222222;
+
+    font-size:
+        clamp(
+            30px,
+            3vw,
+            42px
+        );
+
+    font-weight: 900;
+
+    letter-spacing: -1.2px;
+
+    line-height: 1;
+
+    margin: 0;
+}
+
+
+.aec-comida-products-heading
+p {
+    color: #72695f;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    margin: 0;
+
+    max-width: 350px;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   GRID WOOCOMMERCE
+   ========================================================= */
+
+.aec-comida-products
+.woocommerce
+ul.products {
+    display: grid !important;
+
+    gap: 26px !important;
+
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        );
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+}
+
+
+.aec-comida-products
+.woocommerce
+ul.products::before,
+.aec-comida-products
+.woocommerce
+ul.products::after {
+    display: none !important;
+}
+
+
+/* =========================================================
+   TARJETA PRODUCTO
+   ========================================================= */
+
+.aec-comida-products
+.woocommerce
+ul.products
+li.product {
+    background: #ffffff;
+
+    border:
+        1px solid
+        rgba(
+            34,
+            34,
+            34,
+            0.07
+        );
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 26px
+        rgba(
+            34,
+            34,
+            34,
+            0.06
+        );
+
+    display: flex !important;
+
+    flex-direction: column;
+
+    float: none !important;
+
+    margin: 0 !important;
+
+    min-width: 0;
+
+    overflow: hidden;
+
+    padding: 13px !important;
+
+    position: relative;
+
+    transition:
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+
+    width: 100% !important;
+}
+
+
+.aec-comida-products
+.woocommerce
+ul.products
+li.product:hover {
+    box-shadow:
+        0 18px 40px
+        rgba(
+            34,
+            34,
+            34,
+            0.13
+        );
+
+    transform: translateY(-6px);
+}
+
+
+/* Barra decorativa inferior */
+
+.aec-comida-products
+.woocommerce
+ul.products
+li.product::after {
+    background: #e72c21;
+
+    bottom: 0;
+
+    content: "";
+
+    height: 4px;
+
+    left: 18px;
+
+    opacity: 0;
+
+    position: absolute;
+
+    right: 18px;
+
+    transition:
+        opacity 0.2s ease;
+
+    z-index: 0;
+}
+
+
+.aec-comida-products
+.woocommerce
+ul.products
+li.product:hover::after {
+    opacity: 1;
+}
+
+
+/* =========================================================
+   LINK PRINCIPAL
+   ========================================================= */
+
+.aec-comida-products
+.woocommerce
+ul.products
+li.product
+.woocommerce-LoopProduct-link {
+    color: inherit;
+
+    display: block;
+
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   IMAGEN PRODUCTO
+   ========================================================= */
+
+.aec-comida-products
+.woocommerce
+ul.products
+li.product
+img {
+    aspect-ratio: 1 / 1;
+
+    border-radius: 16px;
+
+    display: block;
+
+    height: auto;
+
+    margin:
+        0
+        0
+        15px !important;
+
+    object-fit: cover;
+
+    transition:
+        filter 0.25s ease,
+        transform 0.25s ease;
+
+    width: 100%;
+}
+
+
+.aec-comida-products
+.woocommerce
+ul.products
+li.product:hover
+img {
+    filter: saturate(1.06);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   NOMBRE PRODUCTO
+   ========================================================= */
+
+.aec-comida-products
+.woocommerce-loop-product__title {
+    color: #222222 !important;
+
+    font-size: 20px !important;
+
+    font-weight: 900 !important;
+
+    letter-spacing: -0.3px;
+
+    line-height: 1.15;
+
+    margin: 0 !important;
+
+    padding:
+        2px
+        1px
+        8px !important;
+}
+
+
+/* =========================================================
+   PRECIO
+   ========================================================= */
+
+.aec-comida-products
+.woocommerce
+.price {
+    color: #e72c21 !important;
+
+    display: block;
+
+    font-size: 19px !important;
+
+    font-weight: 900 !important;
+
+    line-height: 1;
+
+    margin:
+        2px
+        1px
+        15px !important;
+}
+
+
+.aec-comida-products
+.woocommerce
+.price
+.amount {
+    color: inherit !important;
+
+    font-weight: inherit !important;
+}
+
+
+/* =========================================================
+   BOTON ELEGIR
+   ========================================================= */
+
+.aec-comida-products
+.woocommerce
+ul.products
+li.product
+.button,
+.aec-comida-products
+.aec-elegir-producto {
+    align-items: center;
+
+    background: #e72c21 !important;
+
+    border: 0 !important;
+
+    border-radius: 999px !important;
+
+    box-shadow: none !important;
+
+    color: #ffffff !important;
+
+    display: flex !important;
+
+    font-size: 13px !important;
+
+    font-weight: 900 !important;
+
+    justify-content: center;
+
+    line-height: 1 !important;
+
+    margin:
+        auto
+        0
+        0 !important;
+
+    min-height: 38px;
+
+    padding:
+        11px
+        18px !important;
+
+    position: relative;
+
+    text-align: center;
+
+    text-decoration: none !important;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+
+    width: 100%;
+}
+
+
+.aec-comida-products
+.woocommerce
+ul.products
+li.product
+.button:hover,
+.aec-comida-products
+.aec-elegir-producto:hover {
+    background: #c63b32 !important;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   FOCUS
+   ========================================================= */
+
+.aec-comida-back:focus-visible,
+.aec-comida-products
+.woocommerce
+a:focus-visible {
+    outline:
+        4px solid
+        rgba(
+            242,
+            181,
+            68,
+            0.75
+        );
+
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+    .aec-comida-products
+    .woocommerce
+    ul.products {
+        grid-template-columns:
+            repeat(
+                3,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .aec-comida-decoration-big {
+        font-size: 140px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET PEQUEÑA
+   ========================================================= */
+
+@media (max-width: 780px) {
+
+    .aec-comida-hero-inner {
+        min-height: auto;
+
+        padding:
+            42px
+            30px;
+    }
+
+
+    .aec-comida-decoration {
+        display: none;
+    }
+
+
+    .aec-comida-products
+    .woocommerce
+    ul.products {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .aec-comida-products-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    .aec-comida-products-heading
+    p {
+        max-width: 500px;
+
+        text-align: left;
+    }
+
+}
+
+
+/* =========================================================
+   MOVIL
+   ========================================================= */
+
+@media (max-width: 520px) {
+
+    .aec-comida-hero {
+        padding:
+            0
+            14px;
+    }
+
+
+    .aec-comida-hero-inner {
+        border-radius:
+            0
+            0
+            22px
+            22px;
+
+        padding:
+            36px
+            22px
+            32px;
+    }
+
+
+    .aec-comida-hero h1 {
+        font-size: 43px;
+
+        letter-spacing: -1.5px;
+    }
+
+
+    .aec-comida-hero p {
+        font-size: 15px;
+    }
+
+
+    .aec-comida-back {
+        font-size: 13px;
+
+        margin-top: 23px;
+
+        padding:
+            10px
+            14px;
+    }
+
+
+    .aec-comida-products {
+        padding:
+            32px
+            14px
+            60px;
+    }
+
+
+    .aec-comida-products
+    .woocommerce
+    ul.products {
+        gap: 16px !important;
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .aec-comida-products
+    .woocommerce
+    ul.products
+    li.product {
+        border-radius: 17px;
+
+        padding: 9px !important;
+    }
+
+
+    .aec-comida-products
+    .woocommerce
+    ul.products
+    li.product
+    img {
+        border-radius: 12px;
+
+        margin-bottom:
+            10px !important;
+    }
+
+
+    .aec-comida-products
+    .woocommerce-loop-product__title {
+        font-size:
+            16px !important;
+    }
+
+
+    .aec-comida-products
+    .woocommerce
+    .price {
+        font-size:
+            16px !important;
+
+        margin-bottom:
+            11px !important;
+    }
+
+
+    .aec-comida-products
+    .woocommerce
+    ul.products
+    li.product
+    .button,
+    .aec-comida-products
+    .aec-elegir-producto {
+        font-size:
+            12px !important;
+
+        min-height: 35px;
+
+        padding:
+            9px
+            10px !important;
+    }
+
+}
+
+
+/* =========================================================
+   MOVILES MUY PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 370px) {
+
+    .aec-comida-products
+    .woocommerce
+    ul.products {
+        grid-template-columns: 1fr;
+    }
+
+}

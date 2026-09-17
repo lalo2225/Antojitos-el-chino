@@ -1,0 +1,241 @@
+/* =========================================================
+   ANTOJITOS EL CHINO
+   BREADCRUMBS / NAVEGACIÓN INTERNA
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   CONTENEDOR GENERAL
+   --------------------------------------------------------- */
+
+.woocommerce-breadcrumb {
+    align-items: center;
+    box-sizing: border-box;
+    color: #222222;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    font-weight: 700;
+    gap: 8px;
+    line-height: 1.4;
+
+    margin:
+        22px
+        auto
+        18px;
+
+    max-width: 1180px;
+
+    padding:
+        0
+        24px;
+}
+
+
+/* ---------------------------------------------------------
+   ENLACES
+   --------------------------------------------------------- */
+
+.woocommerce-breadcrumb a {
+    align-items: center;
+
+    background: rgba(
+        255,
+        255,
+        255,
+        0.78
+    );
+
+    border: 1px solid
+        rgba(
+            41,
+            76,
+            115,
+            0.16
+        );
+
+    border-radius: 999px;
+
+    box-shadow:
+        0 2px 8px
+        rgba(
+            34,
+            34,
+            34,
+            0.04
+        );
+
+    color: #294c73;
+
+    display: inline-flex;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    padding:
+        7px
+        12px;
+
+    text-decoration: none !important;
+
+    transition:
+        background-color 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease,
+        box-shadow 0.18s ease;
+}
+
+
+/* ---------------------------------------------------------
+   HOVER
+   --------------------------------------------------------- */
+
+.woocommerce-breadcrumb a:hover {
+    background: #c63b32;
+
+    border-color: #c63b32;
+
+    box-shadow:
+        0 5px 14px
+        rgba(
+            198,
+            59,
+            50,
+            0.18
+        );
+
+    color: #ffffff;
+
+    transform:
+        translateY(-1px);
+}
+
+
+/* ---------------------------------------------------------
+   FOCUS ACCESIBLE
+   --------------------------------------------------------- */
+
+.woocommerce-breadcrumb a:focus-visible {
+    outline: 3px solid
+        rgba(
+            242,
+            181,
+            68,
+            0.55
+        );
+
+    outline-offset: 2px;
+}
+
+
+/* ---------------------------------------------------------
+   SEPARADORES
+   --------------------------------------------------------- */
+
+.woocommerce-breadcrumb
+.aec-breadcrumb-separator {
+    align-items: center;
+
+    color: #9b9488;
+
+    display: inline-flex;
+
+    font-size: 17px;
+
+    font-weight: 700;
+
+    justify-content: center;
+
+    line-height: 1;
+
+    margin:
+        0
+        1px;
+}
+
+
+/* ---------------------------------------------------------
+   UBICACIÓN ACTUAL
+   --------------------------------------------------------- */
+
+.woocommerce-breadcrumb
+.aec-breadcrumb-current {
+    align-items: center;
+
+    background: #294c73;
+
+    border-radius: 999px;
+
+    color: #ffffff;
+
+    display: inline-flex;
+
+    font-size: 13px;
+
+    font-weight: 800;
+
+    padding:
+        7px
+        13px;
+}
+
+
+/* ---------------------------------------------------------
+   MÓVIL
+   --------------------------------------------------------- */
+
+@media (max-width: 700px) {
+
+    .woocommerce-breadcrumb {
+        gap: 6px;
+
+        margin:
+            16px
+            auto
+            14px;
+
+        padding:
+            0
+            16px;
+    }
+
+
+    .woocommerce-breadcrumb a,
+    .woocommerce-breadcrumb
+    .aec-breadcrumb-current {
+        font-size: 12px;
+
+        padding:
+            6px
+            10px;
+    }
+
+
+    .woocommerce-breadcrumb
+    .aec-breadcrumb-separator {
+        font-size: 15px;
+    }
+
+}
+
+
+/* ---------------------------------------------------------
+   MOVIMIENTO REDUCIDO
+   --------------------------------------------------------- */
+
+@media (
+    prefers-reduced-motion: reduce
+) {
+
+    .woocommerce-breadcrumb a {
+        transition: none;
+    }
+
+
+    .woocommerce-breadcrumb a:hover {
+        transform: none;
+    }
+
+}

@@ -1,0 +1,1294 @@
+/* =========================================================
+   ANTOJITOS EL CHINO
+   PANEL ADMINISTRATIVO
+   ========================================================= */
+
+
+/* =========================================================
+   CONTENEDOR
+   ========================================================= */
+
+.aec-admin-panel {
+    box-sizing: border-box;
+    margin-top: 24px;
+    max-width: 1380px;
+    padding-right: 20px;
+}
+
+
+/* =========================================================
+   HERO / CABECERA
+   ========================================================= */
+
+.aec-admin-hero {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-left: 5px solid #294c73;
+    border-radius: 14px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    padding: 26px 28px;
+}
+
+
+.aec-admin-hero-content {
+    min-width: 0;
+}
+
+
+.aec-admin-eyebrow {
+    color: #c63b32;
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+
+.aec-admin-hero h1 {
+    color: #222222;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+}
+
+
+.aec-admin-hero p {
+    color: #646970;
+    font-size: 14px;
+    margin: 8px 0 0;
+}
+
+
+.aec-admin-hero-actions {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/* =========================================================
+   BOTONES GENERALES
+   ========================================================= */
+
+.aec-admin-button {
+    align-items: center;
+    border-radius: 9px;
+    box-sizing: border-box;
+    display: inline-flex;
+    font-size: 13px;
+    font-weight: 700;
+    justify-content: center;
+    min-height: 42px;
+    padding: 9px 15px;
+    text-decoration: none;
+    transition:
+        background-color 0.18s ease,
+        border-color 0.18s ease,
+        color 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+.aec-admin-button:hover {
+    transform: translateY(-1px);
+}
+
+
+.aec-admin-button.is-primary {
+    background: #c63b32;
+    border: 1px solid #c63b32;
+    color: #ffffff;
+}
+
+
+.aec-admin-button.is-primary:hover {
+    background: #ad3029;
+    border-color: #ad3029;
+    color: #ffffff;
+}
+
+
+.aec-admin-button.is-secondary {
+    background: #ffffff;
+    border: 1px solid #ccd0d4;
+    color: #294c73;
+}
+
+
+.aec-admin-button.is-secondary:hover {
+    border-color: #294c73;
+    color: #294c73;
+}
+
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+.aec-admin-section {
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 14px;
+    box-sizing: border-box;
+    margin-bottom: 22px;
+    padding: 22px;
+}
+
+
+.aec-admin-section-heading {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+
+.aec-admin-section-heading > div > span {
+    color: #c63b32;
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+
+
+.aec-admin-section-heading h2 {
+    color: #222222;
+    font-size: 21px;
+    font-weight: 800;
+    margin: 0;
+}
+
+
+.aec-admin-section-count {
+    align-items: center;
+    background: #c63b32;
+    border-radius: 999px;
+    color: #ffffff !important;
+    display: inline-flex !important;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    height: 30px;
+    justify-content: center;
+    margin: 0 !important;
+    min-width: 30px;
+    padding: 0 9px;
+}
+
+
+/* =========================================================
+   RESUMEN
+   ========================================================= */
+
+.aec-admin-stats {
+    display: grid;
+    gap: 14px;
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+}
+
+
+.aec-admin-stat {
+    background: #fafafa;
+    border: 1px solid #e8e8e8;
+    border-radius: 12px;
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 18px;
+    position: relative;
+}
+
+
+.aec-admin-stat::before {
+    border-radius: 12px 0 0 12px;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 4px;
+}
+
+
+.aec-admin-stat.is-blue::before {
+    background: #294c73;
+}
+
+
+.aec-admin-stat.is-yellow::before {
+    background: #f2b544;
+}
+
+
+.aec-admin-stat.is-green::before {
+    background: #557a46;
+}
+
+
+.aec-admin-stat.is-red::before {
+    background: #c63b32;
+}
+
+
+.aec-admin-stat-label {
+    color: #646970;
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+.aec-admin-stat-value {
+    color: #222222;
+    display: block;
+    font-size: 34px;
+    font-weight: 800;
+    line-height: 1;
+    margin: 9px 0;
+}
+
+
+.aec-admin-stat-description {
+    color: #777777;
+    display: block;
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   ACCESOS RÁPIDOS
+   ========================================================= */
+
+.aec-admin-actions-grid {
+    display: grid;
+    gap: 12px;
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+}
+
+
+.aec-admin-action {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 12px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 15px;
+    min-height: 125px;
+    padding: 18px;
+    text-decoration: none;
+    transition:
+        border-color 0.18s ease,
+        box-shadow 0.18s ease,
+        transform 0.18s ease;
+}
+
+
+.aec-admin-action:hover {
+    border-color: rgba(41, 76, 115, 0.45);
+    box-shadow: 0 8px 22px rgba(34, 34, 34, 0.06);
+    transform: translateY(-2px);
+}
+
+
+.aec-admin-action-icon {
+    align-items: center;
+    background: #294c73;
+    border-radius: 10px;
+    color: #ffffff;
+    display: flex;
+    flex: 0 0 46px;
+    height: 46px;
+    justify-content: center;
+}
+
+
+.aec-admin-action-icon .dashicons {
+    font-size: 22px;
+    height: 22px;
+    width: 22px;
+}
+
+
+.aec-admin-action-content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0;
+}
+
+
+.aec-admin-action-content > strong {
+    color: #222222;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+
+.aec-admin-action-content p {
+    color: #646970;
+    font-size: 12px;
+    line-height: 1.45;
+    margin: 5px 0 10px;
+}
+
+
+.aec-admin-action-link {
+    color: #c63b32;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   TRANSFERENCIAS
+   ========================================================= */
+
+.aec-admin-transfer-list {
+    display: grid;
+    gap: 10px;
+}
+
+
+.aec-admin-transfer {
+    align-items: center;
+    background: #fffaf1;
+    border: 1px solid #eadfce;
+    border-radius: 11px;
+    box-sizing: border-box;
+    display: grid;
+    gap: 16px;
+    grid-template-columns:
+        95px
+        minmax(170px, 1.5fr)
+        100px
+        110px
+        minmax(210px, auto);
+    padding: 14px 16px;
+}
+
+
+.aec-admin-transfer > div {
+    min-width: 0;
+}
+
+
+.aec-admin-transfer span {
+    color: #777777;
+    display: block;
+    font-size: 10px;
+    font-weight: 700;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+}
+
+
+.aec-admin-transfer strong {
+    color: #222222;
+    font-size: 14px;
+}
+
+
+.aec-admin-transfer-number strong {
+    color: #294c73;
+    font-size: 18px;
+}
+
+
+.aec-admin-transfer-customer strong {
+    display: block;
+    overflow-wrap: anywhere;
+}
+
+
+.aec-admin-transfer-customer small {
+    color: #646970;
+    display: block;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+
+.aec-admin-transfer-time strong {
+    color: #c63b32;
+    font-size: 17px;
+}
+
+
+.aec-admin-transfer-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    justify-content: flex-end;
+}
+
+
+.aec-admin-mini-button {
+    background: #ffffff;
+    border: 1px solid #ccd0d4;
+    border-radius: 7px;
+    color: #294c73;
+    display: inline-flex;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 7px 10px;
+    text-decoration: none;
+}
+
+
+.aec-admin-mini-button:hover {
+    border-color: #294c73;
+    color: #294c73;
+}
+
+
+.aec-admin-mini-button.is-primary {
+    background: #c63b32;
+    border-color: #c63b32;
+    color: #ffffff;
+}
+
+
+.aec-admin-mini-button.is-primary:hover {
+    background: #ad3029;
+    border-color: #ad3029;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   ESTADO VACÍO
+   ========================================================= */
+
+.aec-admin-empty {
+    align-items: center;
+    background: #eef6eb;
+    border: 1px solid #d5e5ce;
+    border-radius: 11px;
+    display: flex;
+    gap: 13px;
+    padding: 17px;
+}
+
+
+.aec-admin-empty.is-large {
+    margin-top: 20px;
+    padding: 24px;
+}
+
+
+.aec-admin-empty .dashicons {
+    color: #557a46;
+    font-size: 28px;
+    height: 28px;
+    width: 28px;
+}
+
+
+.aec-admin-empty strong {
+    color: #315325;
+    display: block;
+    font-size: 14px;
+}
+
+
+.aec-admin-empty p {
+    color: #55724d;
+    margin: 3px 0 0;
+}
+
+
+/* =========================================================
+   PÁGINA TRANSFERENCIAS
+   ========================================================= */
+
+.aec-admin-page-header {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-left: 5px solid #294c73;
+    border-radius: 14px;
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 23px;
+}
+
+
+.aec-admin-page-header h1 {
+    color: #222222;
+    font-size: 27px;
+    font-weight: 800;
+    margin: 2px 0 6px;
+}
+
+
+.aec-admin-page-header p {
+    color: #646970;
+    margin: 0;
+}
+
+
+.aec-admin-more {
+    margin: 15px 0 0;
+    text-align: right;
+}
+
+
+.aec-admin-more a {
+    color: #294c73;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .aec-admin-stats {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .aec-admin-actions-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .aec-admin-transfer {
+        grid-template-columns:
+            90px
+            minmax(150px, 1fr)
+            90px
+            100px;
+    }
+
+
+    .aec-admin-transfer-actions {
+        grid-column: 1 / -1;
+        justify-content: flex-start;
+    }
+
+}
+
+
+@media (max-width: 780px) {
+
+    .aec-admin-hero {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .aec-admin-actions-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .aec-admin-transfer {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .aec-admin-transfer-actions {
+        grid-column: 1 / -1;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .aec-admin-panel {
+        padding-right: 10px;
+    }
+
+
+    .aec-admin-stats {
+        grid-template-columns: 1fr;
+    }
+
+
+    .aec-admin-transfer {
+        grid-template-columns: 1fr;
+    }
+
+
+    .aec-admin-hero {
+        padding: 22px 18px;
+    }
+
+
+    .aec-admin-hero h1 {
+        font-size: 27px;
+    }
+
+}
+/* =========================================================
+   TRANSFERENCIAS V2
+   ========================================================= */
+
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+.aec-transfer-page {
+    max-width: 1240px;
+}
+
+
+.aec-transfer-page-header {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-left: 5px solid #294c73;
+    border-radius: 14px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 17px;
+    padding: 24px 26px;
+}
+
+
+.aec-transfer-page-header h1 {
+    color: #222222;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+}
+
+
+.aec-transfer-page-header p {
+    color: #646970;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 7px 0 0;
+    max-width: 650px;
+}
+
+
+.aec-transfer-back {
+    background: #ffffff;
+    border: 1px solid #ccd0d4;
+    border-radius: 8px;
+    color: #294c73;
+    flex: 0 0 auto;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 9px 13px;
+    text-decoration: none;
+}
+
+
+.aec-transfer-back:hover {
+    border-color: #294c73;
+    color: #294c73;
+}
+
+
+/* =========================================================
+   RESUMEN
+   ========================================================= */
+
+.aec-transfer-summary {
+    margin-bottom: 18px;
+}
+
+
+.aec-transfer-summary-card {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 13px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 15px;
+    max-width: 420px;
+    padding: 16px 18px;
+}
+
+
+.aec-transfer-summary-card.has-pending {
+    border-left: 4px solid #c63b32;
+}
+
+
+.aec-transfer-summary-card.is-clear {
+    border-left: 4px solid #557a46;
+}
+
+
+.aec-transfer-summary-icon {
+    align-items: center;
+    background: #f7f7f7;
+    border-radius: 10px;
+    display: flex;
+    flex: 0 0 45px;
+    height: 45px;
+    justify-content: center;
+}
+
+
+.aec-transfer-summary-card.has-pending
+.aec-transfer-summary-icon {
+    background: #fff1ef;
+    color: #c63b32;
+}
+
+
+.aec-transfer-summary-card.is-clear
+.aec-transfer-summary-icon {
+    background: #eef7ea;
+    color: #557a46;
+}
+
+
+.aec-transfer-summary-icon .dashicons {
+    font-size: 23px;
+    height: 23px;
+    width: 23px;
+}
+
+
+.aec-transfer-summary-card > div:last-child {
+    min-width: 0;
+}
+
+
+.aec-transfer-summary-card span {
+    color: #646970;
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+
+.aec-transfer-summary-card strong {
+    color: #222222;
+    display: block;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1;
+    margin: 5px 0;
+}
+
+
+.aec-transfer-summary-card small {
+    color: #777777;
+    display: block;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   ENCABEZADO DE SECCIÓN
+   ========================================================= */
+
+.aec-transfer-pending-section {
+    margin-bottom: 40px;
+}
+
+
+.aec-transfer-section-heading {
+    align-items: center;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: 13px;
+}
+
+
+.aec-transfer-section-heading > div > span {
+    color: #c63b32;
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+}
+
+
+.aec-transfer-section-heading h2 {
+    color: #222222;
+    font-size: 19px;
+    font-weight: 800;
+    margin: 0;
+}
+
+
+.aec-transfer-counter {
+    align-items: center;
+    background: #c63b32;
+    border-radius: 999px;
+    color: #ffffff;
+    display: inline-flex;
+    font-size: 11px;
+    font-weight: 800;
+    height: 29px;
+    justify-content: center;
+    min-width: 29px;
+    padding: 0 8px;
+}
+
+
+/* =========================================================
+   TARJETAS
+   ========================================================= */
+
+.aec-transfer-cards {
+    display: grid;
+    gap: 14px;
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+}
+
+
+.aec-transfer-card {
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 14px;
+    box-shadow:
+        0 4px 14px
+        rgba(34, 34, 34, 0.035);
+    box-sizing: border-box;
+    min-width: 0;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   HEADER DE TARJETA
+   ========================================================= */
+
+.aec-transfer-card-header {
+    align-items: flex-start;
+    border-bottom: 1px solid #eeeeee;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    padding: 16px 18px;
+}
+
+
+.aec-transfer-card-header > div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.aec-transfer-order-label {
+    color: #777777;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+
+.aec-transfer-order-number {
+    color: #294c73;
+    display: inline-block;
+    font-size: 21px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-top: 2px;
+    text-decoration: none;
+}
+
+
+a.aec-transfer-order-number:hover {
+    color: #c63b32;
+}
+
+
+.aec-transfer-card-header small {
+    color: #888888;
+    font-size: 10px;
+    margin-top: 4px;
+}
+
+
+.aec-transfer-pending-badge {
+    align-items: center;
+    background: #fff1ef;
+    border: 1px solid #efcfcb;
+    border-radius: 999px;
+    color: #a0342c;
+    display: inline-flex;
+    flex: 0 0 auto;
+    font-size: 9px;
+    font-weight: 800;
+    gap: 6px;
+    padding: 6px 9px;
+    text-transform: uppercase;
+}
+
+
+.aec-transfer-pending-badge > span {
+    background: #c63b32;
+    border-radius: 50%;
+    display: block;
+    height: 7px;
+    width: 7px;
+}
+
+
+/* =========================================================
+   CLIENTE
+   ========================================================= */
+
+.aec-transfer-customer-block {
+    background: #fffaf1;
+    border-bottom: 1px solid #f0e8dc;
+    padding: 15px 18px;
+}
+
+
+.aec-transfer-field-label {
+    color: #77736c;
+    display: block;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+
+.aec-transfer-customer-name {
+    color: #222222;
+    display: block;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-top: 3px;
+    overflow-wrap: anywhere;
+    text-transform: uppercase;
+}
+
+
+.aec-transfer-phone {
+    color: #294c73;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+
+.aec-transfer-phone:hover {
+    color: #c63b32;
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   DATOS DEL PEDIDO
+   ========================================================= */
+
+.aec-transfer-details {
+    display: grid;
+    gap: 0;
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+}
+
+
+.aec-transfer-details > div {
+    border-bottom: 1px solid #eeeeee;
+    box-sizing: border-box;
+    padding: 13px 18px;
+}
+
+
+.aec-transfer-details > div:nth-child(odd) {
+    border-right: 1px solid #eeeeee;
+}
+
+
+.aec-transfer-details span {
+    color: #777777;
+    display: block;
+    font-size: 9px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+
+.aec-transfer-details strong {
+    color: #222222;
+    display: block;
+    font-size: 13px;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+
+.aec-transfer-details
+.aec-transfer-highlight {
+    color: #c63b32;
+    font-size: 18px;
+}
+
+
+.aec-transfer-details
+.aec-transfer-total {
+    color: #294c73;
+    font-size: 18px;
+}
+
+
+/* =========================================================
+   INDICACIÓN
+   ========================================================= */
+
+.aec-transfer-review-message {
+    align-items: flex-start;
+    background: #f5f8fb;
+    display: flex;
+    gap: 8px;
+    padding: 11px 18px;
+}
+
+
+.aec-transfer-review-message .dashicons {
+    color: #294c73;
+    flex: 0 0 auto;
+    font-size: 17px;
+    height: 17px;
+    margin-top: 1px;
+    width: 17px;
+}
+
+
+.aec-transfer-review-message p {
+    color: #5d6975;
+    font-size: 10px;
+    line-height: 1.45;
+    margin: 0;
+}
+
+
+/* =========================================================
+   ACCIONES
+   ========================================================= */
+
+.aec-transfer-card-actions {
+    display: flex;
+    gap: 9px;
+    padding: 14px 18px 17px;
+}
+
+
+.aec-transfer-action {
+    align-items: center;
+    border-radius: 8px;
+    box-sizing: border-box;
+    display: inline-flex;
+    flex: 1;
+    font-size: 11px;
+    font-weight: 800;
+    gap: 7px;
+    justify-content: center;
+    min-height: 40px;
+    padding: 8px 11px;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+.aec-transfer-action .dashicons {
+    font-size: 17px;
+    height: 17px;
+    width: 17px;
+}
+
+
+.aec-transfer-action.is-proof {
+    background: #ffffff;
+    border: 1px solid #ccd0d4;
+    color: #294c73;
+}
+
+
+.aec-transfer-action.is-proof:hover {
+    border-color: #294c73;
+    color: #294c73;
+}
+
+
+.aec-transfer-action.is-validate {
+    background: #c63b32;
+    border: 1px solid #c63b32;
+    color: #ffffff;
+}
+
+
+.aec-transfer-action.is-validate:hover {
+    background: #ad3029;
+    border-color: #ad3029;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   TODO AL DÍA
+   ========================================================= */
+
+.aec-transfer-empty {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #dbe7d6;
+    border-left: 5px solid #557a46;
+    border-radius: 14px;
+    display: flex;
+    gap: 17px;
+    margin-bottom: 40px;
+    padding: 25px;
+}
+
+
+.aec-transfer-empty-icon {
+    align-items: center;
+    background: #eef7ea;
+    border-radius: 50%;
+    color: #557a46;
+    display: flex;
+    flex: 0 0 52px;
+    height: 52px;
+    justify-content: center;
+}
+
+
+.aec-transfer-empty-icon .dashicons {
+    font-size: 27px;
+    height: 27px;
+    width: 27px;
+}
+
+
+.aec-transfer-empty h2 {
+    color: #315325;
+    font-size: 18px;
+    margin: 0 0 4px;
+}
+
+
+.aec-transfer-empty p {
+    color: #646970;
+    font-size: 12px;
+    margin: 0 0 7px;
+}
+
+
+.aec-transfer-empty a {
+    color: #294c73;
+    font-size: 11px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .aec-transfer-cards {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 782px) {
+
+    .aec-transfer-page-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .aec-transfer-summary-card {
+        max-width: none;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .aec-transfer-details {
+        grid-template-columns: 1fr;
+    }
+
+
+    .aec-transfer-details > div:nth-child(odd) {
+        border-right: 0;
+    }
+
+
+    .aec-transfer-card-actions {
+        flex-direction: column;
+    }
+
+
+    .aec-transfer-action {
+        width: 100%;
+    }
+
+
+    .aec-transfer-customer-name {
+        font-size: 18px;
+    }
+
+}

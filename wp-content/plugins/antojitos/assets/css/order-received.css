@@ -1,0 +1,469 @@
+/* =========================================================
+   ANTOJITOS EL CHINO
+   CONFIRMACIÓN DEL PEDIDO
+   ========================================================= */
+
+
+/* =========================================================
+   PÁGINA
+   ========================================================= */
+
+body.woocommerce-order-received {
+    background: #fff4df;
+}
+
+
+/* =========================================================
+   CONFIRMACIÓN PRINCIPAL
+   ========================================================= */
+
+.aec-order-confirmation {
+    background: #ffffff;
+    border: 1px solid rgba(34, 34, 34, 0.08);
+    border-radius: 28px;
+    box-shadow:
+        0 20px 60px
+        rgba(34, 34, 34, 0.08);
+    box-sizing: border-box;
+    margin: 42px auto 38px;
+    max-width: 920px;
+    overflow: hidden;
+    padding: 36px;
+}
+
+
+/* =========================================================
+   ENCABEZADO
+   ========================================================= */
+
+.aec-order-confirmation-top {
+    align-items: flex-start;
+    display: flex;
+    gap: 20px;
+}
+
+
+.aec-order-success-icon {
+    align-items: center;
+    background: #557a46;
+    border-radius: 50%;
+    color: #ffffff;
+    display: flex;
+    flex: 0 0 auto;
+    font-size: 29px;
+    font-weight: 800;
+    height: 62px;
+    justify-content: center;
+    width: 62px;
+}
+
+
+.aec-order-confirmation-heading {
+    flex: 1;
+}
+
+
+.aec-order-eyebrow {
+    color: #557a46;
+    display: block;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+}
+
+
+.aec-order-confirmation-heading h1 {
+    color: #222222;
+    font-size: clamp(34px, 5vw, 48px);
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    line-height: 1.05;
+    margin: 0 0 12px;
+}
+
+
+.aec-order-confirmation-heading p {
+    color: #555555;
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 0;
+    max-width: 680px;
+}
+
+
+/* =========================================================
+   NÚMERO DEL PEDIDO
+   ========================================================= */
+
+.aec-order-number-bar {
+    align-items: center;
+    background: #294c73;
+    border-radius: 16px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 28px;
+    padding: 17px 20px;
+}
+
+
+.aec-order-number-bar span {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.aec-order-number-bar strong {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   RESUMEN
+   ========================================================= */
+
+.aec-order-summary-grid {
+    display: grid;
+    gap: 14px;
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+    margin-top: 18px;
+}
+
+
+.aec-order-summary-item {
+    background: #fffaf1;
+    border: 1px solid rgba(34, 34, 34, 0.07);
+    border-radius: 16px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-height: 92px;
+    padding: 18px 20px;
+}
+
+
+.aec-order-summary-label {
+    color: #777777;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+.aec-order-summary-item strong {
+    color: #222222;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+
+.aec-order-summary-important {
+    background: #fff4df;
+    border-color:
+        rgba(242, 181, 68, 0.55);
+}
+
+
+.aec-order-total {
+    color: #c63b32 !important;
+    font-size: 24px !important;
+}
+
+
+/* =========================================================
+   AVISO DE RECOLECCIÓN
+   ========================================================= */
+
+.aec-order-pickup-notice {
+    background: #f2b544;
+    border-radius: 16px;
+    color: #222222;
+    margin-top: 18px;
+    padding: 18px 20px;
+}
+
+
+.aec-order-pickup-notice > div {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.aec-order-pickup-label {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+
+.aec-order-pickup-notice strong {
+    font-size: 24px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   BOTÓN
+   ========================================================= */
+
+.aec-order-actions {
+    margin-top: 26px;
+}
+
+
+.aec-order-menu-button {
+    align-items: center;
+    background: #c63b32;
+    border-radius: 14px;
+    color: #ffffff !important;
+    display: inline-flex;
+    font-size: 16px;
+    font-weight: 800;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 28px;
+    text-decoration: none !important;
+    transition:
+        transform 0.18s ease,
+        opacity 0.18s ease;
+}
+
+
+.aec-order-menu-button:hover {
+    color: #ffffff !important;
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   DETALLES DEL PEDIDO
+   ========================================================= */
+
+.woocommerce-order-received
+.wp-block-woocommerce-order-confirmation-totals-wrapper {
+    box-sizing: border-box;
+    margin: 0 auto 60px;
+    max-width: 920px;
+}
+
+
+.woocommerce-order-received
+.wp-block-woocommerce-order-confirmation-totals-wrapper
+h2 {
+    color: #222222;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 18px;
+}
+
+
+/* ---------------------------------------------------------
+   TABLA DE PRODUCTOS
+   --------------------------------------------------------- */
+
+.woocommerce-order-received
+.wp-block-woocommerce-order-confirmation-totals-wrapper
+table {
+    background: #ffffff;
+    border: 1px solid rgba(34, 34, 34, 0.10);
+    border-collapse: separate;
+    border-radius: 18px;
+    border-spacing: 0;
+    overflow: hidden;
+    width: 100%;
+}
+
+
+.woocommerce-order-received
+.wp-block-woocommerce-order-confirmation-totals-wrapper
+th,
+.woocommerce-order-received
+.wp-block-woocommerce-order-confirmation-totals-wrapper
+td {
+    border-color: rgba(34, 34, 34, 0.08);
+    padding: 16px;
+}
+
+
+.woocommerce-order-received
+.wp-block-woocommerce-order-confirmation-totals-wrapper
+th {
+    color: #222222;
+    font-weight: 800;
+}
+
+
+.woocommerce-order-received
+.wp-block-woocommerce-order-confirmation-totals-wrapper
+a {
+    color: #294c73;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+
+/* =========================================================
+   DATOS DEL CONFIGURADOR
+   ========================================================= */
+
+.woocommerce-order-received
+.wc-item-meta {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.65;
+    margin-top: 10px;
+}
+
+
+.woocommerce-order-received
+.wc-item-meta strong,
+.woocommerce-order-received
+.wc-item-meta-label {
+    color: #222222;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   RESPALDO: ELEMENTOS CLÁSICOS
+   ========================================================= */
+
+.woocommerce-order-received
+.woocommerce-order-overview {
+    display: none !important;
+}
+
+
+.woocommerce-order-received
+.woocommerce-customer-details {
+    display: none !important;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 782px) {
+
+    .aec-order-confirmation {
+        border-radius: 22px;
+        margin:
+            24px 16px
+            32px;
+        padding: 24px;
+    }
+
+
+    .aec-order-confirmation-top {
+        gap: 15px;
+    }
+
+
+    .aec-order-success-icon {
+        font-size: 24px;
+        height: 52px;
+        width: 52px;
+    }
+
+
+    .aec-order-confirmation-heading h1 {
+        font-size: 36px;
+    }
+
+
+    .aec-order-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .aec-order-summary-item {
+        min-height: auto;
+    }
+
+
+    .aec-order-actions {
+        width: 100%;
+    }
+
+
+    .aec-order-menu-button {
+        width: 100%;
+    }
+
+
+    .woocommerce-order-received
+    .wp-block-woocommerce-order-confirmation-totals-wrapper {
+        margin:
+            0 16px
+            50px;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 480px) {
+
+    .aec-order-confirmation {
+        border-radius: 18px;
+        margin:
+            18px 12px
+            26px;
+        padding: 20px;
+    }
+
+
+    .aec-order-confirmation-top {
+        flex-direction: column;
+    }
+
+
+    .aec-order-confirmation-heading h1 {
+        font-size: 32px;
+    }
+
+
+    .aec-order-confirmation-heading p {
+        font-size: 15px;
+    }
+
+
+    .aec-order-number-bar {
+        padding: 15px 16px;
+    }
+
+
+    .aec-order-number-bar strong {
+        font-size: 20px;
+    }
+
+
+    .aec-order-pickup-notice > div {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 6px;
+    }
+
+
+    .woocommerce-order-received
+    .wp-block-woocommerce-order-confirmation-totals-wrapper {
+        margin:
+            0 12px
+            40px;
+    }
+
+}

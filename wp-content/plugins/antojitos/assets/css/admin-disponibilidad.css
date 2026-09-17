@@ -1,0 +1,669 @@
+/* =========================================================
+   ANTOJITOS EL CHINO
+   ADMIN - DISPONIBILIDAD
+   ========================================================= */
+
+
+.aec-availability-admin {
+    box-sizing: border-box;
+    margin-top: 24px;
+    max-width: 1280px;
+    padding-right: 20px;
+}
+
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+.aec-availability-header {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-left: 5px solid #294c73;
+    border-radius: 14px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    padding: 24px 26px;
+}
+
+
+.aec-availability-eyebrow {
+    color: #c63b32;
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+
+.aec-availability-header h1 {
+    color: #222222;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+}
+
+
+.aec-availability-header p {
+    color: #646970;
+    font-size: 13px;
+    line-height: 1.5;
+    margin: 7px 0 0;
+    max-width: 650px;
+}
+
+
+.aec-availability-back {
+    background: #ffffff;
+    border: 1px solid #ccd0d4;
+    border-radius: 8px;
+    color: #294c73;
+    flex: 0 0 auto;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 9px 13px;
+    text-decoration: none;
+}
+
+
+.aec-availability-back:hover {
+    border-color: #294c73;
+    color: #294c73;
+}
+
+
+/* =========================================================
+   MENSAJE GUARDADO
+   ========================================================= */
+
+.aec-availability-success {
+    align-items: center;
+    background: #eef7ea;
+    border: 1px solid #cfe2c6;
+    border-radius: 11px;
+    display: flex;
+    gap: 12px;
+    margin-bottom: 18px;
+    padding: 13px 16px;
+}
+
+
+.aec-availability-success .dashicons {
+    color: #557a46;
+    font-size: 25px;
+    height: 25px;
+    width: 25px;
+}
+
+
+.aec-availability-success strong,
+.aec-availability-success span {
+    display: block;
+}
+
+
+.aec-availability-success strong {
+    color: #315325;
+    font-size: 13px;
+}
+
+
+.aec-availability-success div span {
+    color: #55724d;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+
+/* =========================================================
+   RESUMEN
+   ========================================================= */
+
+.aec-availability-summary {
+    display: grid;
+    gap: 12px;
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+    margin-bottom: 18px;
+}
+
+
+.aec-availability-summary-card {
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 12px;
+    box-sizing: border-box;
+    padding: 17px 18px;
+    position: relative;
+}
+
+
+.aec-availability-summary-card::before {
+    background: #294c73;
+    border-radius: 12px 0 0 12px;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 4px;
+}
+
+
+.aec-availability-summary-card.is-available::before {
+    background: #557a46;
+}
+
+
+.aec-availability-summary-card.is-soldout::before {
+    background: #c63b32;
+}
+
+
+.aec-availability-summary-card > span {
+    color: #646970;
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+}
+
+
+.aec-availability-summary-card > strong {
+    color: #222222;
+    display: block;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 1;
+    margin: 9px 0 7px;
+}
+
+
+.aec-availability-summary-card > small {
+    color: #777777;
+    display: block;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   INFORMACIÓN
+   ========================================================= */
+
+.aec-availability-info {
+    align-items: flex-start;
+    background: #f3f7fb;
+    border: 1px solid #dce6ef;
+    border-radius: 11px;
+    display: flex;
+    gap: 11px;
+    margin-bottom: 18px;
+    padding: 14px 16px;
+}
+
+
+.aec-availability-info > .dashicons {
+    color: #294c73;
+    flex: 0 0 auto;
+    margin-top: 1px;
+}
+
+
+.aec-availability-info strong {
+    color: #294c73;
+    display: block;
+    font-size: 12px;
+}
+
+
+.aec-availability-info p {
+    color: #576575;
+    font-size: 11px;
+    line-height: 1.5;
+    margin: 4px 0 0;
+}
+
+
+/* =========================================================
+   HERRAMIENTAS
+   ========================================================= */
+
+.aec-availability-toolbar {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 12px;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    margin-bottom: 17px;
+    padding: 12px;
+}
+
+
+.aec-availability-search {
+    align-items: center;
+    background: #f7f7f7;
+    border: 1px solid #dedede;
+    border-radius: 8px;
+    display: flex;
+    flex: 1;
+    max-width: 420px;
+    min-height: 40px;
+    padding: 0 11px;
+}
+
+
+.aec-availability-search .dashicons {
+    color: #777777;
+    margin-right: 7px;
+}
+
+
+.aec-availability-search input {
+    background: transparent;
+    border: 0;
+    box-shadow: none !important;
+    color: #222222;
+    flex: 1;
+    font-size: 13px;
+    min-height: 38px;
+    outline: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+.aec-availability-filters {
+    display: flex;
+    gap: 6px;
+}
+
+
+.aec-availability-filter {
+    background: #ffffff;
+    border: 1px solid #dcdcde;
+    border-radius: 8px;
+    color: #50575e;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+    min-height: 38px;
+    padding: 6px 12px;
+}
+
+
+.aec-availability-filter:hover {
+    border-color: #294c73;
+    color: #294c73;
+}
+
+
+.aec-availability-filter.is-active {
+    background: #294c73;
+    border-color: #294c73;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   GRUPOS
+   ========================================================= */
+
+.aec-availability-group {
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 13px;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+
+.aec-availability-group[hidden] {
+    display: none !important;
+}
+
+
+.aec-availability-group-header {
+    background: #f8f8f8;
+    border-bottom: 1px solid #ececec;
+    padding: 14px 17px;
+}
+
+
+.aec-availability-group-header h2 {
+    color: #222222;
+    font-size: 15px;
+    font-weight: 800;
+    margin: 0;
+}
+
+
+.aec-availability-group-header span {
+    color: #777777;
+    display: block;
+    font-size: 10px;
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   INGREDIENTES
+   ========================================================= */
+
+.aec-availability-items {
+    display: grid;
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(0, 1fr)
+        );
+}
+
+
+.aec-availability-item {
+    align-items: center;
+    border-bottom: 1px solid #eeeeee;
+    box-sizing: border-box;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    min-height: 73px;
+    padding: 12px 16px;
+    transition:
+        background-color 0.15s ease;
+}
+
+
+.aec-availability-item:nth-child(odd) {
+    border-right: 1px solid #eeeeee;
+}
+
+
+.aec-availability-item.is-soldout {
+    background: #fff8f7;
+}
+
+
+.aec-availability-item[hidden] {
+    display: none !important;
+}
+
+
+.aec-availability-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+
+.aec-availability-item-info strong {
+    color: #222222;
+    font-size: 13px;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+
+.aec-availability-item-info span {
+    color: #777777;
+    font-size: 10px;
+}
+
+
+.aec-availability-item.is-soldout
+.aec-availability-item-info strong {
+    color: #8f302a;
+}
+
+
+/* =========================================================
+   BOTÓN DE ESTADO
+   ========================================================= */
+
+.aec-availability-toggle {
+    align-items: center;
+    border: 1px solid;
+    border-radius: 999px;
+    cursor: pointer;
+    display: inline-flex;
+    flex: 0 0 auto;
+    font-size: 10px;
+    font-weight: 800;
+    gap: 7px;
+    justify-content: center;
+    min-height: 34px;
+    min-width: 113px;
+    padding: 6px 11px;
+    text-transform: uppercase;
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease,
+        transform 0.15s ease;
+}
+
+
+.aec-availability-toggle:hover {
+    transform: translateY(-1px);
+}
+
+
+.aec-availability-toggle.is-available {
+    background: #eef7ea;
+    border-color: #c9dfbf;
+    color: #315325;
+}
+
+
+.aec-availability-toggle.is-soldout {
+    background: #fff0ee;
+    border-color: #eccac6;
+    color: #a0342c;
+}
+
+
+.aec-availability-status-dot {
+    background: currentColor;
+    border-radius: 50%;
+    display: inline-block;
+    height: 7px;
+    width: 7px;
+}
+
+
+/* =========================================================
+   SIN RESULTADOS
+   ========================================================= */
+
+.aec-availability-empty {
+    background: #ffffff;
+    border: 1px dashed #c8c8c8;
+    border-radius: 12px;
+    margin-bottom: 17px;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+
+.aec-availability-empty .dashicons {
+    color: #999999;
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+}
+
+
+.aec-availability-empty strong {
+    color: #333333;
+    display: block;
+    font-size: 14px;
+    margin-top: 7px;
+}
+
+
+.aec-availability-empty p {
+    color: #777777;
+    font-size: 11px;
+    margin: 5px 0 0;
+}
+
+
+/* =========================================================
+   BARRA GUARDAR
+   ========================================================= */
+
+.aec-availability-savebar {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #dcdcde;
+    border-radius: 12px;
+    bottom: 18px;
+    box-shadow:
+        0 8px 30px
+        rgba(34, 34, 34, 0.10);
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 22px 0 40px;
+    padding: 13px 15px;
+    position: sticky;
+    z-index: 20;
+}
+
+
+.aec-availability-savebar > div {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.aec-availability-save-status {
+    color: #646970;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+
+.aec-availability-save-status.has-changes {
+    color: #c63b32;
+}
+
+
+.aec-availability-savebar small {
+    color: #888888;
+    font-size: 10px;
+    margin-top: 2px;
+}
+
+
+.aec-availability-save-button {
+    background: #c63b32;
+    border: 1px solid #c63b32;
+    border-radius: 8px;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 800;
+    min-height: 40px;
+    padding: 8px 15px;
+}
+
+
+.aec-availability-save-button:hover {
+    background: #ad3029;
+    border-color: #ad3029;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .aec-availability-items {
+        grid-template-columns: 1fr;
+    }
+
+
+    .aec-availability-item:nth-child(odd) {
+        border-right: 0;
+    }
+
+}
+
+
+@media (max-width: 782px) {
+
+    .aec-availability-admin {
+        padding-right: 10px;
+    }
+
+
+    .aec-availability-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .aec-availability-summary {
+        grid-template-columns: 1fr;
+    }
+
+
+    .aec-availability-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+
+    .aec-availability-search {
+        max-width: none;
+    }
+
+
+    .aec-availability-filters {
+        overflow-x: auto;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .aec-availability-item {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .aec-availability-toggle {
+        align-self: stretch;
+        width: 100%;
+    }
+
+
+    .aec-availability-savebar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+
+    .aec-availability-save-button {
+        width: 100%;
+    }
+
+}

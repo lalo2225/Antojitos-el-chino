@@ -1,0 +1,100 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:html -->
+<main class="aec-comida-page">
+
+    <section class="aec-comida-hero">
+
+        <div class="aec-comida-hero-inner">
+
+            <div class="aec-comida-hero-copy">
+
+                <span class="aec-comida-eyebrow">
+                    MENÚ · COMIDA
+                </span>
+
+                <h1>
+                    Elige tu antojito
+                </h1>
+
+                <p>
+                    Selecciona tu favorito, personalízalo a tu gusto
+                    y agrega cualquier indicación especial.
+                </p>
+
+                <a
+                    class="aec-comida-back"
+                    href="/menu/"
+                >
+                    <span aria-hidden="true">←</span>
+                    Volver al menú
+                </a>
+
+            </div>
+
+
+            <div
+                class="aec-comida-decoration"
+                aria-hidden="true"
+            >
+
+                <span class="aec-comida-decoration-big">
+                    A
+                </span>
+
+                <span class="aec-comida-decoration-small">
+                    MAÍZ AZUL
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- /wp:html -->
+
+
+<!-- wp:group {"className":"aec-comida-products","layout":{"type":"constrained"}} -->
+<div class="wp-block-group aec-comida-products">
+
+    <!-- wp:html -->
+
+    <div class="aec-comida-products-heading">
+
+        <div>
+
+            <span>
+                NUESTROS ANTOJITOS
+            </span>
+
+            <h2>
+                ¿Cuál se te antoja hoy?
+            </h2>
+
+        </div>
+
+        <p>
+            Elige uno para ver sus opciones y personalizar tu pedido.
+        </p>
+
+    </div>
+
+    <!-- /wp:html -->
+
+
+    <!-- wp:shortcode -->
+    [products category="tacos,quesadillas,pambazos,volcanes,tlacoyos,gorditas,sopes,huaraches" cat_operator="IN" columns="4" limit="-1" orderby="menu_order" order="ASC"]
+    <!-- /wp:shortcode -->
+
+</div>
+<!-- /wp:group -->
+
+
+<!-- wp:html -->
+
+</main>
+
+<!-- /wp:html -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

@@ -1,0 +1,707 @@
+/* =========================================================
+   ANTOJITOS EL CHINO
+   DETALLE OPERATIVO DEL PEDIDO
+   ========================================================= */
+
+
+/* =========================================================
+   CONTENEDOR PRINCIPAL
+   ========================================================= */
+
+.aec-operation-mode
+.aec-order-detail-command {
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-left: 5px solid #294c73;
+    border-radius: 14px;
+    box-sizing: border-box;
+    margin: 18px 20px 20px 0;
+    max-width: 1450px;
+    overflow: hidden;
+}
+
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+.aec-operation-mode
+.aec-order-detail-header {
+    align-items: center;
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    padding: 22px 24px 18px;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-eyebrow {
+    color: #c63b32;
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-title-row {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-title-row h1 {
+    color: #222222;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+    padding: 0;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-created {
+    color: #777777;
+    display: block;
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+
+/* =========================================================
+   ESTADO
+   ========================================================= */
+
+.aec-operation-mode
+.aec-order-detail-status {
+    background: #eef3f8;
+    border: 1px solid #d6e0ea;
+    border-radius: 999px;
+    color: #294c73;
+    display: inline-flex;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 6px 10px;
+    text-transform: uppercase;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-status.status-on-hold {
+    background: #fff6dc;
+    border-color: #ead8a4;
+    color: #745900;
+}
+
+
+/* =========================================================
+   BOTONES SUPERIORES
+   ========================================================= */
+
+.aec-operation-mode
+.aec-order-detail-header-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-button {
+    align-items: center;
+    border-radius: 8px;
+    display: inline-flex;
+    font-size: 11px;
+    font-weight: 700;
+    justify-content: center;
+    min-height: 38px;
+    padding: 7px 12px;
+    text-decoration: none;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-button.is-secondary {
+    background: #ffffff;
+    border: 1px solid #ccd0d4;
+    color: #294c73;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-button.is-secondary:hover {
+    border-color: #294c73;
+    color: #294c73;
+}
+
+
+/* =========================================================
+   CLIENTE
+   ========================================================= */
+
+.aec-operation-mode
+.aec-order-detail-customer {
+    background: #fffaf1;
+    border-bottom: 1px solid #f0e6d8;
+    border-top: 1px solid #f0e6d8;
+    padding: 16px 24px;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-customer > span {
+    color: #77736c;
+    display: block;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 0.9px;
+    text-transform: uppercase;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-customer > strong {
+    color: #222222;
+    display: block;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.15;
+    margin-top: 3px;
+    text-transform: uppercase;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-customer > a {
+    color: #294c73;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 5px;
+    text-decoration: none;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-customer > a:hover {
+    color: #c63b32;
+    text-decoration: underline;
+}
+
+
+/* =========================================================
+   RESUMEN
+   ========================================================= */
+
+.aec-operation-mode
+.aec-order-detail-summary {
+    display: grid;
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        );
+}
+
+
+.aec-operation-mode
+.aec-order-detail-summary-item {
+    border-bottom: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    box-sizing: border-box;
+    min-width: 0;
+    padding: 15px 20px;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-summary-item:last-child {
+    border-right: 0;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-summary-item > span {
+    color: #777777;
+    display: block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-summary-item > strong {
+    color: #222222;
+    display: block;
+    font-size: 14px;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-summary-item.is-highlight
+> strong {
+    color: #c63b32;
+    font-size: 19px;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-summary-item.is-total
+> strong {
+    color: #294c73;
+    font-size: 19px;
+}
+
+
+/* =========================================================
+   TRANSFERENCIA PENDIENTE
+   ========================================================= */
+
+.aec-operation-mode
+.aec-order-detail-payment-alert {
+    align-items: center;
+    background: #fff8e5;
+    border-top: 1px solid #ead8a4;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 14px 20px;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-payment-alert > div {
+    align-items: flex-start;
+    display: flex;
+    gap: 10px;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-payment-alert
+.dashicons {
+    color: #b07b00;
+    flex: 0 0 auto;
+    margin-top: 2px;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-payment-alert strong {
+    color: #664c00;
+    display: block;
+    font-size: 12px;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-payment-alert p {
+    color: #7a661f;
+    font-size: 10px;
+    line-height: 1.4;
+    margin: 3px 0 0;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-payment-alert > a {
+    background: #c63b32;
+    border-radius: 8px;
+    color: #ffffff;
+    flex: 0 0 auto;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 9px 12px;
+    text-decoration: none;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-payment-alert > a:hover {
+    background: #ad3029;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   WORKFLOW
+   ========================================================= */
+
+.aec-operation-mode
+.aec-order-detail-workflow {
+    align-items: center;
+    background: #f4f7fa;
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: 14px 20px;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-workflow > div > span {
+    color: #777777;
+    display: block;
+    font-size: 9px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-workflow > div > strong {
+    color: #294c73;
+    display: block;
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-next {
+    background: #c63b32;
+    border-radius: 8px;
+    color: #ffffff;
+    display: inline-flex;
+    font-size: 11px;
+    font-weight: 800;
+    justify-content: center;
+    min-height: 38px;
+    padding: 9px 13px;
+    text-decoration: none;
+}
+
+
+.aec-operation-mode
+.aec-order-detail-next:hover {
+    background: #ad3029;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   WOOCOMMERCE - LIMPIEZA VISUAL
+   ========================================================= */
+
+/*
+ * No eliminamos funcionalidad.
+ * Únicamente hacemos que los módulos nativos se vean
+ * como una segunda capa debajo de nuestra información.
+ */
+
+.aec-operation-mode
+#woocommerce-order-items,
+
+.aec-operation-mode
+#order_data,
+
+.aec-operation-mode
+#woocommerce-order-notes {
+    border: 1px solid #e3e3e3;
+    box-shadow: none;
+}
+
+
+/* Títulos de metabox */
+
+.aec-operation-mode
+.postbox
+.postbox-header {
+    border-bottom-color: #eeeeee;
+}
+
+
+.aec-operation-mode
+.postbox
+.postbox-header h2 {
+    color: #222222;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+
+/* Productos */
+
+.aec-operation-mode
+#woocommerce-order-items
+.woocommerce_order_items_wrapper {
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+}
+
+
+.aec-operation-mode
+#woocommerce-order-items
+table.woocommerce_order_items {
+    border-collapse: collapse;
+}
+
+
+.aec-operation-mode
+#woocommerce-order-items
+table.woocommerce_order_items
+thead th {
+    background: #f7f7f7;
+    color: #646970;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+
+.aec-operation-mode
+#woocommerce-order-items
+table.woocommerce_order_items
+tbody td {
+    border-bottom-color: #eeeeee;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .aec-operation-mode
+    .aec-order-detail-summary {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+}
+
+
+@media (max-width: 782px) {
+
+    .aec-operation-mode
+    .aec-order-detail-command {
+        margin-right: 10px;
+    }
+
+
+    .aec-operation-mode
+    .aec-order-detail-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .aec-operation-mode
+    .aec-order-detail-payment-alert,
+
+    .aec-operation-mode
+    .aec-order-detail-workflow {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+
+    .aec-operation-mode
+    .aec-order-detail-payment-alert > a,
+
+    .aec-operation-mode
+    .aec-order-detail-next {
+        width: auto;
+    }
+
+}
+
+
+@media (max-width: 520px) {
+
+    .aec-operation-mode
+    .aec-order-detail-summary {
+        grid-template-columns: 1fr;
+    }
+
+
+    .aec-operation-mode
+    .aec-order-detail-summary-item {
+        border-right: 0;
+    }
+
+
+    .aec-operation-mode
+    .aec-order-detail-title-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .aec-operation-mode
+    .aec-order-detail-customer > strong {
+        font-size: 19px;
+    }
+
+}
+/* =========================================================
+   MODO OPERATIVO
+   OCULTAR ELEMENTOS TÉCNICOS DE WOOCOMMERCE
+   ========================================================= */
+
+
+/*
+ * Información principal nativa:
+ *
+ * - General
+ * - Facturación
+ * - Envío
+ * - Cliente
+ * - Fecha
+ * - Estado editable
+ *
+ * Ya mostramos esta información en nuestra
+ * cabecera operativa.
+ */
+
+.aec-operation-mode
+#woocommerce-order-data,
+
+.aec-operation-mode
+#order_data {
+    display: none !important;
+}
+
+
+/*
+ * Acciones genéricas del pedido.
+ *
+ * Nuestro flujo utiliza sus propios botones:
+ *
+ * Confirmado
+ * → En preparación
+ * → Listo
+ * → Entregado
+ */
+
+.aec-operation-mode
+#woocommerce-order-actions {
+    display: none !important;
+}
+
+
+/*
+ * Información de marketing / atribución.
+ */
+
+.aec-operation-mode
+#woocommerce-order-attribution {
+    display: none !important;
+}
+
+
+/*
+ * Historial comercial del cliente.
+ *
+ * No es necesario para la operación
+ * del puesto.
+ */
+
+.aec-operation-mode
+#woocommerce-order-customer-history {
+    display: none !important;
+}
+
+
+/*
+ * Datos adicionales / campos personalizados
+ * de WooCommerce que pudieran aparecer.
+ */
+
+.aec-operation-mode
+#postcustom,
+
+.aec-operation-mode
+#woocommerce-order-downloads {
+    display: none !important;
+}
+
+
+/* =========================================================
+   ÁREA PRINCIPAL MÁS AMPLIA
+   ========================================================= */
+
+/*
+ * Al quitar los paneles laterales innecesarios,
+ * permitimos que productos y operación
+ * aprovechen mejor el espacio.
+ */
+
+.aec-operation-mode
+#post-body.columns-2 {
+    margin-right: 0 !important;
+}
+
+
+.aec-operation-mode
+#postbox-container-1 {
+    display: none !important;
+}
+
+
+.aec-operation-mode
+#postbox-container-2 {
+    margin-right: 0 !important;
+    width: 100% !important;
+}
+
+
+/* =========================================================
+   PRODUCTOS DEL PEDIDO
+   ========================================================= */
+
+.aec-operation-mode
+#woocommerce-order-items {
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+
+.aec-operation-mode
+#woocommerce-order-items
+.postbox-header {
+    background: #ffffff;
+}
+
+
+.aec-operation-mode
+#woocommerce-order-items
+.postbox-header h2 {
+    color: #222222;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   NOTAS
+   ========================================================= */
+
+/*
+ * Las notas sí las conservamos por ahora.
+ * Pueden servir para incidencias o comentarios
+ * especiales del pedido.
+ */
+
+.aec-operation-mode
+#woocommerce-order-notes {
+    border-radius: 14px;
+    overflow: hidden;
+}

@@ -1,0 +1,107 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "layout": {
+      "contentSize": "1200px",
+      "wideSize": "1400px"
+    },
+    "color": {
+      "palette": [
+        {
+          "slug": "rojo-chile",
+          "name": "Rojo Chile",
+          "color": "#C63B32"
+        },
+        {
+          "slug": "azul-maiz",
+          "name": "Azul Maíz",
+          "color": "#294C73"
+        },
+        {
+          "slug": "amarillo-maiz",
+          "name": "Amarillo Maíz",
+          "color": "#F2B544"
+        },
+        {
+          "slug": "crema-tortilla",
+          "name": "Crema Tortilla",
+          "color": "#FFF4DF"
+        },
+        {
+          "slug": "carbon",
+          "name": "Carbón",
+          "color": "#222222"
+        },
+        {
+          "slug": "verde-cilantro",
+          "name": "Verde Cilantro",
+          "color": "#557A46"
+        }
+      ]
+    },
+    "typography": {
+      "fluid": true,
+      "fontSizes": [
+        {
+          "slug": "small",
+          "size": "14px",
+          "name": "Pequeño"
+        },
+        {
+          "slug": "medium",
+          "size": "18px",
+          "name": "Mediano"
+        },
+        {
+          "slug": "large",
+          "size": "32px",
+          "name": "Grande"
+        },
+        {
+          "slug": "x-large",
+          "size": "56px",
+          "name": "Muy grande"
+        }
+      ]
+    },
+    "spacing": {
+      "units": [
+        "px",
+        "rem",
+        "%",
+        "vw",
+        "vh"
+      ]
+    }
+  },
+  "styles": {
+    "color": {
+      "background": "#FFF4DF",
+      "text": "#222222"
+    },
+    "typography": {
+      "fontFamily": "-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+      "lineHeight": "1.5"
+    },
+    "elements": {
+      "button": {
+        "color": {
+          "background": "#C63B32",
+          "text": "#FFFFFF"
+        },
+        "border": {
+          "radius": "14px"
+        },
+        "typography": {
+          "fontWeight": "700"
+        }
+      },
+      "link": {
+        "color": {
+          "text": "#294C73"
+        }
+      }
+    }
+  }
+}

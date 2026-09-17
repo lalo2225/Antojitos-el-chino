@@ -1,0 +1,61 @@
+services:
+  db:
+    image: mysql:8.4.8
+    container_name: antojitos_db
+    restart: unless-stopped
+
+    environment:
+      MYSQL_DATABASE: ${WP_DB_NAME}
+      MYSQL_USER: ${WP_DB_USER}
+      MYSQL_PASSWORD: ${WP_DB_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+
+    volumes:
+      - db_data:/var/lib/mysql
+
+    networks:
+      - antojitos_net
+
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -uroot -p$$MYSQL_ROOT_PASSWORD --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+
+
+  wordpress:
+    image: wordpress:7.1.0-php8.3-apache
+    container_name: antojitos_wordpress
+    restart: unless-stopped
+
+    depends_on:
+      db:
+        condition: service_healthy
+
+    ports:
+      - "8080:80"
+
+    environment:
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_NAME: ${WP_DB_NAME}
+      WORDPRESS_DB_USER: ${WP_DB_USER}
+      WORDPRESS_DB_PASSWORD: ${WP_DB_PASSWORD}
+
+    volumes:
+      - wordpress_data:/var/www/html
+      - ./wp-content/themes/antojitos:/var/www/html/wp-content/themes/antojitos
+      - ./wp-content/plugins/antojitos:/var/www/html/wp-content/plugins/antojitos
+
+    networks:
+      - antojitos_net
+
+
+volumes:
+  db_data:
+  wordpress_data:
+
+
+networks:
+  antojitos_net:
+    driver: bridge

@@ -1,0 +1,643 @@
+/* =========================================================
+   ANTOJITOS EL CHINO
+   CARRITO
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   CONTENEDOR
+   --------------------------------------------------------- */
+
+.woocommerce-cart main,
+.woocommerce-cart .wp-site-blocks {
+    background: #fff4df;
+}
+
+.woocommerce-cart .woocommerce,
+.woocommerce-cart .wc-block-cart {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+
+/* ---------------------------------------------------------
+   TÍTULO
+   --------------------------------------------------------- */
+
+.woocommerce-cart h1,
+.woocommerce-cart .wp-block-post-title {
+    color: #222222;
+    font-size: clamp(38px, 5vw, 58px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+
+/* =========================================================
+   WOO BLOCKS - CARRITO MODERNO
+   ========================================================= */
+
+.wc-block-cart {
+    padding-bottom: 80px;
+}
+
+.wc-block-cart-items {
+    border-collapse: separate !important;
+    border-spacing: 0 16px !important;
+}
+
+.wc-block-cart-items__row {
+    background: #ffffff;
+}
+
+.wc-block-cart-items__row td {
+    background: #ffffff;
+    border-bottom: 0 !important;
+    border-top: 0 !important;
+    padding-bottom: 24px !important;
+    padding-top: 24px !important;
+}
+
+.wc-block-cart-items__row
+.wc-block-cart-item__image {
+    border-radius: 18px 0 0 18px;
+    padding-left: 18px !important;
+}
+
+.wc-block-cart-items__row
+.wc-block-cart-item__total {
+    border-radius: 0 18px 18px 0;
+    padding-right: 18px !important;
+}
+
+
+/* Imagen */
+
+.wc-block-cart-item__image img {
+    aspect-ratio: 1 / 1;
+    border-radius: 14px;
+    object-fit: cover;
+}
+
+
+/* Nombre */
+
+.wc-block-components-product-name {
+    color: #222222 !important;
+    font-size: 19px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    text-decoration: none !important;
+}
+
+.wc-block-components-product-name:hover {
+    color: #c63b32 !important;
+}
+
+
+/* ---------------------------------------------------------
+   CONFIGURACIÓN DEL PRODUCTO
+   --------------------------------------------------------- */
+
+.wc-block-components-product-details {
+    background: #fffaf1;
+    border-radius: 12px;
+    box-sizing: border-box;
+    margin-top: 12px !important;
+    padding: 12px 14px !important;
+}
+
+.wc-block-components-product-details
+.wc-block-components-product-details__name {
+    color: #555555;
+    font-weight: 700;
+}
+
+.wc-block-components-product-details
+.wc-block-components-product-details__value {
+    color: #222222;
+}
+
+
+/* ---------------------------------------------------------
+   PRECIO
+   --------------------------------------------------------- */
+
+.wc-block-components-product-price {
+    color: #c63b32;
+    font-weight: 800;
+}
+
+.wc-block-cart-item__total-price-and-sale-badge-wrapper
+.wc-block-components-product-price {
+    font-size: 18px;
+}
+
+
+/* ---------------------------------------------------------
+   CANTIDAD
+   --------------------------------------------------------- */
+
+.wc-block-components-quantity-selector {
+    background: #ffffff;
+    border: 1px solid rgba(34, 34, 34, 0.14) !important;
+    border-radius: 10px !important;
+    overflow: hidden;
+}
+
+.wc-block-components-quantity-selector
+.wc-block-components-quantity-selector__button {
+    color: #222222;
+    font-weight: 800;
+}
+
+.wc-block-components-quantity-selector
+.wc-block-components-quantity-selector__input {
+    color: #222222;
+    font-weight: 700;
+}
+
+
+/* ---------------------------------------------------------
+   ELIMINAR
+   --------------------------------------------------------- */
+
+.wc-block-cart-item__remove-link {
+    color: #777777 !important;
+    font-size: 13px !important;
+    text-decoration: underline !important;
+}
+
+.wc-block-cart-item__remove-link:hover {
+    color: #c63b32 !important;
+}
+
+
+/* =========================================================
+   RESUMEN DEL PEDIDO
+   ========================================================= */
+
+.wc-block-cart__sidebar {
+    background: #ffffff;
+    border: 1px solid rgba(34, 34, 34, 0.08);
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: fit-content;
+    padding: 24px !important;
+}
+
+.wc-block-cart__totals-title {
+    color: #222222;
+    font-size: 22px !important;
+    font-weight: 800 !important;
+}
+
+.wc-block-components-totals-item {
+    color: #222222;
+}
+
+.wc-block-components-totals-footer-item {
+    border-top: 1px solid rgba(34, 34, 34, 0.10);
+    font-size: 18px;
+    font-weight: 800;
+}
+
+
+/* ---------------------------------------------------------
+   BOTÓN FINALIZAR PEDIDO
+   --------------------------------------------------------- */
+
+.wc-block-cart__submit-button {
+    background: #c63b32 !important;
+    border: none !important;
+    border-radius: 14px !important;
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    min-height: 54px;
+    text-decoration: none !important;
+}
+
+.wc-block-cart__submit-button:hover {
+    background: #b7332b !important;
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   CARRITO CLÁSICO
+   POR COMPATIBILIDAD
+   ========================================================= */
+
+.woocommerce-cart-form
+.shop_table.cart {
+    background: #ffffff;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.woocommerce-cart-form
+.shop_table.cart
+.product-thumbnail img {
+    border-radius: 12px;
+    width: 90px;
+}
+
+.woocommerce-cart-form
+.product-name a {
+    color: #222222;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.woocommerce-cart-form
+.product-price,
+.woocommerce-cart-form
+.product-subtotal {
+    color: #c63b32;
+    font-weight: 800;
+}
+
+.woocommerce-cart
+.cart_totals {
+    background: #ffffff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 24px;
+}
+
+.woocommerce-cart
+.cart_totals h2 {
+    font-weight: 800;
+}
+
+.woocommerce-cart
+.wc-proceed-to-checkout
+.checkout-button {
+    background: #c63b32 !important;
+    border-radius: 14px !important;
+    color: #ffffff !important;
+    font-weight: 800 !important;
+}
+
+
+/* =========================================================
+   CARRITO VACÍO
+   ========================================================= */
+
+.wc-block-cart__empty-cart__title,
+.cart-empty {
+    color: #222222;
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.return-to-shop {
+    text-align: center;
+}
+
+.return-to-shop .button {
+    background: #c63b32 !important;
+    border-radius: 12px !important;
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 782px) {
+
+    .wc-block-cart {
+        padding: 20px 14px 60px;
+    }
+
+    .wc-block-cart-items {
+        border-spacing: 0 12px !important;
+    }
+
+    .wc-block-cart-items__row td {
+        padding-bottom: 16px !important;
+        padding-top: 16px !important;
+    }
+
+    .wc-block-cart-item__image img {
+        border-radius: 10px;
+    }
+
+    .wc-block-components-product-name {
+        font-size: 16px !important;
+    }
+
+    .wc-block-components-product-details {
+        font-size: 13px;
+        padding: 10px !important;
+    }
+
+    .wc-block-cart__sidebar {
+        border-radius: 16px;
+        margin-top: 20px;
+        padding: 18px !important;
+    }
+
+    .wc-block-cart__submit-button {
+        min-height: 52px;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .wc-block-cart-item__image {
+        width: 80px !important;
+    }
+
+    .wc-block-cart-item__image img {
+        height: 70px;
+        width: 70px;
+    }
+
+    .wc-block-components-product-name {
+        font-size: 15px !important;
+    }
+}
+/* =========================================================
+   CARRITO - MEJORA VISUAL SEGURA
+   No modifica la estructura de WooCommerce Blocks
+   ========================================================= */
+
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+.woocommerce-cart h1,
+.woocommerce-cart .wp-block-post-title {
+    font-weight: 900;
+    letter-spacing: -2px;
+    margin-bottom: 34px;
+}
+
+
+.woocommerce-cart h1::before,
+.woocommerce-cart .wp-block-post-title::before {
+    color: #c63b32;
+    content: "TU PEDIDO";
+    display: block;
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    margin-bottom: 9px;
+}
+
+
+.woocommerce-cart h1::after,
+.woocommerce-cart .wp-block-post-title::after {
+    color: #756d64;
+    content: "Revisa tus productos antes de continuar al pago.";
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0;
+    line-height: 1.45;
+    margin-top: 11px;
+}
+
+
+/* =========================================================
+   TARJETAS DE PRODUCTO
+   ========================================================= */
+
+.wc-block-cart-items__row {
+    filter:
+        drop-shadow(
+            0 7px 18px
+            rgba(34, 34, 34, 0.05)
+        );
+
+    transition:
+        filter 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.wc-block-cart-items__row:hover {
+    filter:
+        drop-shadow(
+            0 14px 28px
+            rgba(34, 34, 34, 0.11)
+        );
+
+    transform: translateY(-3px);
+}
+
+
+.wc-block-cart-items__row td {
+    background: #ffffff !important;
+}
+
+
+.wc-block-cart-items__row
+.wc-block-cart-item__image {
+    border-left: 4px solid transparent;
+
+    transition:
+        border-color 0.25s ease;
+}
+
+
+.wc-block-cart-items__row:hover
+.wc-block-cart-item__image {
+    border-left-color: #c63b32;
+}
+
+
+/* =========================================================
+   IMAGEN
+   ========================================================= */
+
+.wc-block-cart-item__image img {
+    transition:
+        filter 0.25s ease,
+        transform 0.3s ease;
+}
+
+
+.wc-block-cart-items__row:hover
+.wc-block-cart-item__image img {
+    filter: saturate(1.06);
+    transform: scale(1.035);
+}
+
+
+/* =========================================================
+   NOMBRE
+   ========================================================= */
+
+.wc-block-components-product-name {
+    font-weight: 900 !important;
+    letter-spacing: -0.25px;
+}
+
+
+/* =========================================================
+   CONFIGURACION
+   ========================================================= */
+
+.wc-block-components-product-details {
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf1,
+            #fff3df
+        ) !important;
+
+    border:
+        1px solid
+        rgba(242, 181, 68, 0.22);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.wc-block-cart-items__row:hover
+.wc-block-components-product-details {
+    border-color:
+        rgba(242, 181, 68, 0.42);
+
+    box-shadow:
+        0 4px 12px
+        rgba(242, 181, 68, 0.08);
+}
+
+
+/* =========================================================
+   CANTIDAD
+   ========================================================= */
+
+.wc-block-components-quantity-selector {
+    border-radius: 999px !important;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.wc-block-components-quantity-selector:hover {
+    border-color:
+        rgba(41, 76, 115, 0.45) !important;
+
+    box-shadow:
+        0 3px 10px
+        rgba(41, 76, 115, 0.08);
+}
+
+
+.wc-block-components-quantity-selector__button {
+    color: #294c73 !important;
+    font-weight: 900 !important;
+}
+
+
+/* =========================================================
+   ELIMINAR
+   ========================================================= */
+
+.wc-block-cart-item__remove-link {
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.wc-block-cart-item__remove-link:hover {
+    color: #c63b32 !important;
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   RESUMEN
+   ========================================================= */
+
+.wc-block-cart__sidebar {
+    box-shadow:
+        0 12px 35px
+        rgba(34, 34, 34, 0.08);
+
+    position: sticky;
+    top: 105px;
+
+    transition:
+        box-shadow 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.wc-block-cart__sidebar:hover {
+    box-shadow:
+        0 17px 42px
+        rgba(34, 34, 34, 0.11);
+}
+
+
+/* =========================================================
+   BOTON CHECKOUT
+   ========================================================= */
+
+.wc-block-cart__submit-button {
+    box-shadow:
+        0 8px 20px
+        rgba(198, 59, 50, 0.18);
+
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.wc-block-cart__submit-button:hover {
+    background: #a9312a !important;
+
+    box-shadow:
+        0 12px 27px
+        rgba(198, 59, 50, 0.27);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   MOVIL
+   ========================================================= */
+
+@media (max-width: 782px) {
+
+    .wc-block-cart-items__row:hover {
+        transform: none;
+    }
+
+
+    .wc-block-cart__sidebar {
+        position: static;
+    }
+
+
+    .woocommerce-cart h1::after,
+    .woocommerce-cart
+    .wp-block-post-title::after {
+        font-size: 13px;
+    }
+
+}

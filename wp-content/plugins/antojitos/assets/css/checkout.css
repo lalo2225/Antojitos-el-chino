@@ -1,0 +1,258 @@
+/* =========================================================
+   ANTOJITOS EL CHINO
+   CHECKOUT
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   FONDO
+   --------------------------------------------------------- */
+
+.woocommerce-checkout {
+    background: #fff4df;
+}
+
+
+/* ---------------------------------------------------------
+   OCULTAR DIRECCIÓN DE FACTURACIÓN
+   ---------------------------------------------------------
+   WooCommerce conserva internamente México como país.
+   El cliente no necesita llenar datos de facturación.
+   --------------------------------------------------------- */
+
+.woocommerce-checkout
+.wc-block-checkout__billing-fields {
+    display: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   OCULTAR DIRECCIÓN DE ENVÍO
+   ---------------------------------------------------------
+   No tenemos entrega a domicilio.
+   --------------------------------------------------------- */
+
+.woocommerce-checkout
+.wc-block-checkout__shipping-fields {
+    display: none !important;
+}
+
+
+/* ---------------------------------------------------------
+   CONTACTO
+   ---------------------------------------------------------
+   Conservamos únicamente el correo.
+   Quitamos el encabezado grande de "Información de contacto"
+   para que se sienta como un campo simple del pedido.
+   --------------------------------------------------------- */
+
+.woocommerce-checkout
+.wc-block-checkout__contact-fields
+.wc-block-components-checkout-step__heading {
+    display: none !important;
+}
+
+
+.woocommerce-checkout
+.wc-block-checkout__contact-fields {
+    margin-bottom: 28px !important;
+    padding-top: 0 !important;
+}
+
+
+/* ---------------------------------------------------------
+   CONTENEDOR GENERAL
+   --------------------------------------------------------- */
+
+.woocommerce-checkout
+.wc-block-checkout {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+
+/* ---------------------------------------------------------
+   CAMPOS
+   --------------------------------------------------------- */
+
+.woocommerce-checkout
+.wc-block-components-text-input input,
+.woocommerce-checkout
+.wc-block-components-combobox-control input,
+.woocommerce-checkout
+.wc-block-components-select select {
+    background: #ffffff;
+    border: 1px solid rgba(34, 34, 34, 0.20);
+    border-radius: 12px;
+    color: #222222;
+    min-height: 52px;
+}
+
+
+.woocommerce-checkout
+.wc-block-components-text-input input:focus,
+.woocommerce-checkout
+.wc-block-components-combobox-control input:focus,
+.woocommerce-checkout
+.wc-block-components-select select:focus {
+    border-color: #294c73;
+    box-shadow: 0 0 0 1px #294c73;
+    outline: none;
+}
+
+
+/* ---------------------------------------------------------
+   TÍTULOS
+   --------------------------------------------------------- */
+
+.woocommerce-checkout
+.wc-block-components-checkout-step__title,
+.woocommerce-checkout
+.wc-block-components-title {
+    color: #222222;
+    font-weight: 800;
+}
+
+
+/* ---------------------------------------------------------
+   INFORMACIÓN ADICIONAL
+   --------------------------------------------------------- */
+
+.woocommerce-checkout
+.wc-block-checkout__additional-fields {
+    margin-top: 24px;
+}
+
+
+/* ---------------------------------------------------------
+   MÉTODOS DE PAGO
+   --------------------------------------------------------- */
+
+.woocommerce-checkout
+.wc-block-checkout__payment-method {
+    margin-top: 28px;
+}
+
+
+.woocommerce-checkout
+.wc-block-components-radio-control-accordion-option {
+    background: #ffffff;
+    border: 1px solid rgba(34, 34, 34, 0.12);
+    border-radius: 14px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+
+.woocommerce-checkout
+.wc-block-components-radio-control-accordion-option
+input[type="radio"] {
+    accent-color: #c63b32;
+}
+
+
+/* ---------------------------------------------------------
+   RESUMEN
+   --------------------------------------------------------- */
+
+.woocommerce-checkout
+.wc-block-components-sidebar {
+    background: #ffffff;
+    border: 1px solid rgba(34, 34, 34, 0.08);
+    border-radius: 20px;
+    box-sizing: border-box;
+    height: fit-content;
+    padding: 18px;
+}
+
+
+/* ---------------------------------------------------------
+   PRODUCTOS DEL RESUMEN
+   --------------------------------------------------------- */
+
+.woocommerce-checkout
+.wc-block-components-order-summary-item__image img {
+    border-radius: 10px;
+}
+
+
+.woocommerce-checkout
+.wc-block-components-product-name {
+    color: #222222 !important;
+    font-weight: 800 !important;
+}
+
+
+/* ---------------------------------------------------------
+   TOTAL
+   --------------------------------------------------------- */
+
+.woocommerce-checkout
+.wc-block-components-totals-footer-item {
+    border-top: 1px solid rgba(34, 34, 34, 0.12);
+    font-size: 20px;
+    font-weight: 800;
+}
+
+
+/* ---------------------------------------------------------
+   BOTÓN REALIZAR PEDIDO
+   --------------------------------------------------------- */
+
+.woocommerce-checkout
+.wc-block-components-checkout-place-order-button {
+    background: #c63b32 !important;
+    border: 0 !important;
+    border-radius: 14px !important;
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 800 !important;
+    min-height: 56px;
+}
+
+
+.woocommerce-checkout
+.wc-block-components-checkout-place-order-button:hover {
+    background: #b7332b !important;
+}
+
+
+/* ---------------------------------------------------------
+   NOTA DEL PEDIDO
+   --------------------------------------------------------- */
+
+.woocommerce-checkout
+.wc-block-components-checkbox {
+    color: #222222;
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 782px) {
+
+    .woocommerce-checkout
+    .wc-block-checkout {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+
+    .woocommerce-checkout
+    .wc-block-components-sidebar {
+        border-radius: 16px;
+        margin-top: 20px;
+        padding: 14px;
+    }
+
+
+    .woocommerce-checkout
+    .wc-block-components-checkout-place-order-button {
+        min-height: 54px;
+        width: 100%;
+    }
+}

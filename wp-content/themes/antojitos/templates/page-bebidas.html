@@ -1,0 +1,101 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:html -->
+<main class="aec-bebidas-page">
+
+    <section class="aec-bebidas-hero">
+
+        <div class="aec-bebidas-hero-inner">
+
+            <div class="aec-bebidas-hero-copy">
+
+                <span class="aec-bebidas-eyebrow">
+                    MENÚ · BEBIDAS
+                </span>
+
+                <h1>
+                    Algo para acompañar
+                </h1>
+
+                <p>
+                    Elige entre aguas frescas y refrescos
+                    para completar tu pedido.
+                </p>
+
+                <a
+                    class="aec-bebidas-back"
+                    href="/menu/"
+                >
+                    <span aria-hidden="true">←</span>
+                    Volver al menú
+                </a>
+
+            </div>
+
+
+            <div
+                class="aec-bebidas-decoration"
+                aria-hidden="true"
+            >
+
+                <span class="aec-bebidas-decoration-big">
+                    B
+                </span>
+
+                <span class="aec-bebidas-decoration-small">
+                    BEBIDAS
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+<!-- /wp:html -->
+
+
+<!-- wp:group {"className":"aec-bebidas-products","layout":{"type":"constrained"}} -->
+<div class="wp-block-group aec-bebidas-products">
+
+    <!-- wp:html -->
+
+    <div class="aec-bebidas-products-heading">
+
+        <div>
+
+            <span>
+                PARA ACOMPAÑAR
+            </span>
+
+            <h2>
+                Elige algo fresco
+            </h2>
+
+        </div>
+
+        <p>
+            Selecciona tu bebida y después elige
+            sabor, presentación o refresco.
+        </p>
+
+    </div>
+
+    <!-- /wp:html -->
+
+
+    <!-- wp:shortcode -->
+    [products category="aguas-frescas,refrescos" cat_operator="IN" columns="2" limit="-1" orderby="menu_order" order="ASC"]
+    <!-- /wp:shortcode -->
+
+</div>
+<!-- /wp:group -->
+
+
+<!-- wp:html -->
+
+</main>
+
+<!-- /wp:html -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

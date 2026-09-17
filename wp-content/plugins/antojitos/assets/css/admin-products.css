@@ -1,0 +1,588 @@
+/* =========================================================
+   ANTOJITOS EL CHINO
+   MENÚ / PRODUCTOS
+   ========================================================= */
+
+
+.aec-products-admin {
+    box-sizing: border-box;
+    margin-top: 24px;
+    max-width: 1280px;
+    padding-right: 20px;
+}
+
+
+/* =========================================================
+   CABECERA
+   ========================================================= */
+
+.aec-products-header {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-left: 5px solid #294c73;
+    border-radius: 14px;
+    box-sizing: border-box;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    margin-bottom: 18px;
+    padding: 24px 26px;
+}
+
+
+.aec-products-eyebrow {
+    color: #c63b32;
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.4px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+
+.aec-products-header h1 {
+    color: #222222;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0;
+}
+
+
+.aec-products-header p {
+    color: #646970;
+    font-size: 13px;
+    margin: 7px 0 0;
+}
+
+
+.aec-products-header-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+
+.aec-products-button {
+    align-items: center;
+    border-radius: 8px;
+    display: inline-flex;
+    font-size: 11px;
+    font-weight: 800;
+    justify-content: center;
+    min-height: 38px;
+    padding: 7px 12px;
+    text-decoration: none;
+}
+
+
+.aec-products-button.is-secondary {
+    background: #ffffff;
+    border: 1px solid #ccd0d4;
+    color: #294c73;
+}
+
+
+.aec-products-button.is-primary {
+    background: #c63b32;
+    border: 1px solid #c63b32;
+    color: #ffffff;
+}
+
+
+.aec-products-button.is-primary:hover {
+    background: #ad3029;
+    border-color: #ad3029;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   RESUMEN
+   ========================================================= */
+
+.aec-products-summary {
+    display: grid;
+    gap: 12px;
+    grid-template-columns:
+        repeat(
+            4,
+            minmax(0, 1fr)
+        );
+    margin-bottom: 18px;
+}
+
+
+.aec-products-stat {
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 12px;
+    padding: 16px 18px;
+    position: relative;
+}
+
+
+.aec-products-stat::before {
+    background: #294c73;
+    border-radius: 12px 0 0 12px;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 4px;
+}
+
+
+.aec-products-stat.is-published::before {
+    background: #557a46;
+}
+
+
+.aec-products-stat.is-food::before {
+    background: #c63b32;
+}
+
+
+.aec-products-stat.is-drinks::before {
+    background: #f2b544;
+}
+
+
+.aec-products-stat > span {
+    color: #646970;
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+
+.aec-products-stat > strong {
+    color: #222222;
+    display: block;
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 1;
+    margin: 8px 0 6px;
+}
+
+
+.aec-products-stat > small {
+    color: #777777;
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   BUSCADOR
+   ========================================================= */
+
+.aec-products-toolbar {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 12px;
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding: 12px;
+}
+
+
+.aec-products-search {
+    align-items: center;
+    background: #f7f7f7;
+    border: 1px solid #dedede;
+    border-radius: 8px;
+    display: flex;
+    flex: 1;
+    max-width: 430px;
+    min-height: 40px;
+    padding: 0 11px;
+}
+
+
+.aec-products-search .dashicons {
+    color: #777777;
+    margin-right: 7px;
+}
+
+
+.aec-products-search input {
+    background: transparent;
+    border: 0;
+    box-shadow: none !important;
+    flex: 1;
+    min-height: 38px;
+    outline: 0;
+    padding: 0;
+}
+
+
+.aec-products-filters {
+    display: flex;
+    gap: 6px;
+}
+
+
+.aec-products-filter {
+    background: #ffffff;
+    border: 1px solid #dcdcde;
+    border-radius: 8px;
+    color: #50575e;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 700;
+    min-height: 38px;
+    padding: 6px 12px;
+}
+
+
+.aec-products-filter.is-active {
+    background: #294c73;
+    border-color: #294c73;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   LISTADO
+   ========================================================= */
+
+.aec-products-list {
+    background: #ffffff;
+    border: 1px solid #e3e3e3;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+
+.aec-product-row {
+    align-items: center;
+    border-bottom: 1px solid #eeeeee;
+    box-sizing: border-box;
+    display: grid;
+    gap: 16px;
+    grid-template-columns:
+        74px
+        minmax(220px, 1fr)
+        100px
+        130px
+        180px;
+    min-height: 96px;
+    padding: 12px 16px;
+}
+
+
+.aec-product-row:last-child {
+    border-bottom: 0;
+}
+
+
+.aec-product-row[hidden] {
+    display: none !important;
+}
+
+
+/* Imagen */
+
+.aec-product-image {
+    align-items: center;
+    background: #f7f7f7;
+    border-radius: 10px;
+    display: flex;
+    height: 68px;
+    justify-content: center;
+    overflow: hidden;
+    width: 68px;
+}
+
+
+.aec-product-image-file {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+
+/* Nombre */
+
+.aec-product-main {
+    min-width: 0;
+}
+
+
+.aec-product-name-row {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+
+.aec-product-name-row > strong {
+    color: #222222;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+
+.aec-product-categories {
+    color: #646970;
+    display: block;
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+
+.aec-product-main small {
+    color: #909090;
+    display: block;
+    font-size: 9px;
+    margin-top: 4px;
+}
+
+
+/* Estado */
+
+.aec-product-status {
+    border-radius: 999px;
+    display: inline-flex;
+    font-size: 8px;
+    font-weight: 800;
+    padding: 5px 7px;
+    text-transform: uppercase;
+}
+
+
+.aec-product-status.status-publish {
+    background: #eef7ea;
+    color: #315325;
+}
+
+
+.aec-product-status.status-draft {
+    background: #fff5dc;
+    color: #705500;
+}
+
+
+.aec-product-status.status-private,
+.aec-product-status.status-pending {
+    background: #f0f0f1;
+    color: #50575e;
+}
+
+
+/* Tipo / precio */
+
+.aec-product-type > span,
+.aec-product-price > span {
+    color: #777777;
+    display: block;
+    font-size: 9px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+
+.aec-product-type > strong {
+    color: #294c73;
+    font-size: 12px;
+}
+
+
+.aec-product-price > strong {
+    color: #222222;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+
+.aec-product-price .has-no-price {
+    color: #c63b32;
+    font-size: 11px;
+}
+
+
+/* Acciones */
+
+.aec-product-actions {
+    display: flex;
+    gap: 7px;
+    justify-content: flex-end;
+}
+
+
+.aec-product-action {
+    border-radius: 7px;
+    display: inline-flex;
+    font-size: 10px;
+    font-weight: 800;
+    justify-content: center;
+    padding: 7px 9px;
+    text-decoration: none;
+}
+
+
+.aec-product-action.is-view {
+    background: #ffffff;
+    border: 1px solid #ccd0d4;
+    color: #294c73;
+}
+
+
+.aec-product-action.is-edit {
+    background: #294c73;
+    border: 1px solid #294c73;
+    color: #ffffff;
+}
+
+
+.aec-product-action.is-edit:hover {
+    background: #203d5d;
+    color: #ffffff;
+}
+
+
+/* =========================================================
+   SIN RESULTADOS
+   ========================================================= */
+
+.aec-products-empty {
+    background: #ffffff;
+    border: 1px dashed #cccccc;
+    border-radius: 12px;
+    padding: 35px 20px;
+    text-align: center;
+}
+
+
+.aec-products-empty .dashicons {
+    color: #999999;
+    font-size: 30px;
+    height: 30px;
+    width: 30px;
+}
+
+
+.aec-products-empty h2 {
+    color: #333333;
+    font-size: 15px;
+    margin: 8px 0 4px;
+}
+
+
+.aec-products-empty p {
+    color: #777777;
+    font-size: 11px;
+    margin: 0;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1050px) {
+
+    .aec-product-row {
+        grid-template-columns:
+            70px
+            minmax(190px, 1fr)
+            90px
+            120px;
+    }
+
+
+    .aec-product-actions {
+        grid-column: 2 / -1;
+        justify-content: flex-start;
+    }
+
+}
+
+
+@media (max-width: 782px) {
+
+    .aec-products-admin {
+        padding-right: 10px;
+    }
+
+
+    .aec-products-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    .aec-products-summary {
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+
+
+    .aec-products-toolbar {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+
+    .aec-products-search {
+        max-width: none;
+    }
+
+
+    .aec-product-row {
+        grid-template-columns:
+            70px
+            1fr;
+    }
+
+
+    .aec-product-type,
+    .aec-product-price,
+    .aec-product-actions {
+        grid-column: 2;
+    }
+
+
+    .aec-product-actions {
+        justify-content: flex-start;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    .aec-products-summary {
+        grid-template-columns: 1fr;
+    }
+
+
+    .aec-products-filters {
+        overflow-x: auto;
+    }
+
+
+    .aec-product-row {
+        grid-template-columns: 60px 1fr;
+        padding: 12px;
+    }
+
+
+    .aec-product-image {
+        height: 56px;
+        width: 56px;
+    }
+
+}

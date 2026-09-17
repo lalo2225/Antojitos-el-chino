@@ -1,0 +1,1131 @@
+/* =========================================================
+   ANTOJITOS EL CHINO
+   PRODUCTO INDIVIDUAL
+   ========================================================= */
+
+
+/* =========================================================
+   BASE
+   ========================================================= */
+
+.single-product,
+.single-product * {
+    box-sizing: border-box;
+}
+
+
+.single-product main,
+.single-product .wp-site-blocks {
+    background: #fff4df;
+}
+
+
+/* =========================================================
+   BREADCRUMB
+   Más discreto que la versión general.
+   ========================================================= */
+
+.single-product
+.woocommerce-breadcrumb {
+    align-items: center;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    color: #756d64 !important;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 13px;
+    gap: 7px;
+    margin:
+        18px
+        auto
+        4px !important;
+    max-width: 1200px;
+    padding:
+        0
+        24px !important;
+}
+
+
+.single-product
+.woocommerce-breadcrumb
+a {
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    color: #294c73 !important;
+    font-size: 13px !important;
+    font-weight: 700;
+    min-height: 0 !important;
+    padding: 0 !important;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+
+.single-product
+.woocommerce-breadcrumb
+a:hover {
+    background: transparent !important;
+    color: #c63b32 !important;
+    transform: none !important;
+}
+
+
+.single-product
+.woocommerce-breadcrumb
+.aec-breadcrumb-current {
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    color: #222222 !important;
+    font-size: 13px !important;
+    font-weight: 800;
+    padding: 0 !important;
+}
+
+
+.single-product
+.woocommerce-breadcrumb
+.aec-breadcrumb-separator {
+    color: #aaa39a !important;
+    font-size: 12px;
+    margin: 0 2px !important;
+}
+
+
+/* =========================================================
+   CONTENEDOR DEL PRODUCTO
+   ========================================================= */
+
+.single-product
+div.product {
+    margin:
+        0
+        auto !important;
+    max-width: 1200px;
+    padding:
+        28px
+        24px
+        72px !important;
+}
+
+
+/* Limpiar floats de WooCommerce */
+
+.single-product
+div.product::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+
+/* =========================================================
+   GALERÍA
+   ========================================================= */
+
+.single-product
+div.product
+.woocommerce-product-gallery {
+    float: left !important;
+    margin: 0 !important;
+    position: sticky !important;
+    top: 105px;
+    width: 42% !important;
+}
+
+
+.single-product
+.woocommerce-product-gallery__wrapper {
+    background: #ffffff;
+    border:
+        1px solid
+        rgba(
+            34,
+            34,
+            34,
+            0.07
+        );
+    border-radius: 24px;
+    box-shadow:
+        0 10px 34px
+        rgba(
+            34,
+            34,
+            34,
+            0.08
+        );
+    overflow: hidden;
+}
+
+
+.single-product
+.woocommerce-product-gallery__image {
+    overflow: hidden;
+}
+
+
+.single-product
+.woocommerce-product-gallery__image
+a {
+    display: block;
+}
+
+
+.single-product
+.woocommerce-product-gallery__image
+img {
+    aspect-ratio: 1 / 1;
+    display: block;
+    height: auto !important;
+    margin: 0 !important;
+    object-fit: cover;
+    transition:
+        filter 0.3s ease,
+        transform 0.45s ease;
+    width: 100% !important;
+}
+
+
+.single-product
+.woocommerce-product-gallery__image:hover
+img {
+    filter: saturate(1.03);
+    transform: scale(1.015);
+}
+
+
+/* Lupa */
+
+.single-product
+.woocommerce-product-gallery__trigger {
+    align-items: center !important;
+    background: rgba(255, 255, 255, 0.94) !important;
+    border:
+        1px solid
+        rgba(
+            34,
+            34,
+            34,
+            0.08
+        ) !important;
+    border-radius: 50% !important;
+    box-shadow:
+        0 5px 18px
+        rgba(
+            34,
+            34,
+            34,
+            0.10
+        );
+    display: flex !important;
+    height: 42px !important;
+    justify-content: center !important;
+    right: 17px !important;
+    top: 17px !important;
+    width: 42px !important;
+    z-index: 5;
+}
+
+
+/* =========================================================
+   RESUMEN
+   ========================================================= */
+
+.single-product
+div.product
+.summary {
+    float: right !important;
+    margin: 0 !important;
+    padding:
+        10px
+        0
+        0;
+    width: 53% !important;
+}
+
+
+/* =========================================================
+   TÍTULO
+   ========================================================= */
+
+.single-product
+div.product
+.product_title {
+    color: #222222 !important;
+    font-size:
+        clamp(
+            38px,
+            4vw,
+            50px
+        ) !important;
+    font-weight: 900 !important;
+    letter-spacing: -1.5px;
+    line-height: 1 !important;
+    margin:
+        0
+        0
+        12px !important;
+}
+
+
+/* =========================================================
+   PRECIO
+   ========================================================= */
+
+.single-product
+div.product
+.summary
+.price {
+    color: #c63b32 !important;
+    font-size: 30px !important;
+    font-weight: 900 !important;
+    line-height: 1;
+    margin:
+        0
+        0
+        13px !important;
+}
+
+
+.single-product
+div.product
+.summary
+.price
+.amount {
+    color: inherit !important;
+    font-weight: inherit !important;
+}
+
+
+/* =========================================================
+   DESCRIPCIÓN CORTA
+   ========================================================= */
+
+.single-product
+.woocommerce-product-details__short-description {
+    color: #625b53;
+    font-size: 14px;
+    line-height: 1.55;
+    margin-bottom: 0;
+    max-width: 680px;
+}
+
+
+.single-product
+.woocommerce-product-details__short-description
+p {
+    margin:
+        0
+        0
+        10px;
+}
+
+
+/* =========================================================
+   FORMULARIO
+   ========================================================= */
+
+.single-product
+form.cart {
+    margin:
+        0 !important;
+}
+
+
+/* =========================================================
+   CONFIGURADOR
+   ========================================================= */
+
+.single-product
+.aec-configurador {
+    background: #fffdf9;
+    border:
+        1px solid
+        rgba(
+            34,
+            34,
+            34,
+            0.09
+        );
+    border-radius: 20px;
+    box-shadow:
+        0 8px 28px
+        rgba(
+            34,
+            34,
+            34,
+            0.045
+        );
+    margin:
+        18px
+        0
+        18px !important;
+    max-width: none !important;
+    padding:
+        20px
+        22px;
+}
+
+
+/* =========================================================
+   TÍTULO CONFIGURADOR
+   ========================================================= */
+
+.single-product
+.aec-configurador
+h3 {
+    color: #222222;
+    font-size: 24px;
+    font-weight: 900;
+    letter-spacing: -0.4px;
+    line-height: 1.15;
+    margin:
+        0
+        0
+        19px;
+}
+
+
+/* =========================================================
+   CAMPOS
+   ========================================================= */
+
+.single-product
+.aec-configurador
+.aec-field {
+    margin-bottom: 18px;
+}
+
+
+.single-product
+.aec-configurador
+.aec-field:last-child {
+    margin-bottom: 0;
+}
+
+
+.single-product
+.aec-configurador
+.aec-field
+> label,
+.single-product
+.aec-configurador
+.aec-field-title {
+    color: #222222;
+    font-size: 15px;
+    font-weight: 800;
+    line-height: 1.35;
+    margin-bottom: 7px;
+}
+
+
+.single-product
+.aec-configurador
+.aec-field-help {
+    color: #777068;
+    font-size: 12px;
+    line-height: 1.45;
+    margin:
+        0
+        0
+        10px;
+}
+
+
+/* =========================================================
+   SELECT
+   ========================================================= */
+
+.single-product
+.aec-configurador
+.aec-field
+select {
+    background-color: #ffffff;
+    border:
+        1px solid
+        rgba(
+            34,
+            34,
+            34,
+            0.20
+        ) !important;
+    border-radius: 11px;
+    box-shadow: none !important;
+    color: #222222;
+    font-size: 15px;
+    min-height: 48px;
+    padding:
+        9px
+        42px
+        9px
+        13px;
+}
+
+
+.single-product
+.aec-configurador
+.aec-field
+select:hover {
+    border-color:
+        rgba(
+            41,
+            76,
+            115,
+            0.55
+        ) !important;
+}
+
+
+.single-product
+.aec-configurador
+.aec-field
+select:focus {
+    border-color: #294c73 !important;
+    box-shadow:
+        0
+        0
+        0
+        3px
+        rgba(
+            41,
+            76,
+            115,
+            0.10
+        ) !important;
+    outline: none !important;
+}
+
+
+/* =========================================================
+   CHECKBOX / RADIO
+   ========================================================= */
+
+.single-product
+.aec-check-grid,
+.single-product
+.aec-radio-grid {
+    display: grid;
+    gap: 9px;
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(
+                125px,
+                1fr
+            )
+        );
+}
+
+
+.single-product
+.aec-check-option,
+.single-product
+.aec-radio-option {
+    background: #ffffff;
+    border:
+        1px solid
+        rgba(
+            34,
+            34,
+            34,
+            0.12
+        );
+    border-radius: 11px;
+    min-height: 44px;
+    padding:
+        9px
+        12px;
+}
+
+
+.single-product
+.aec-check-option:hover,
+.single-product
+.aec-radio-option:hover {
+    background: #fffaf1;
+    border-color: #c63b32;
+    transform: translateY(-1px);
+}
+
+
+.single-product
+.aec-check-option
+input,
+.single-product
+.aec-radio-option
+input {
+    accent-color: #c63b32;
+    height: 17px;
+    width: 17px;
+}
+
+
+.single-product
+.aec-check-option
+span,
+.single-product
+.aec-radio-option
+span {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   INDICACIONES ESPECIALES
+   ========================================================= */
+
+.single-product
+.aec-configurador
+.aec-special-field {
+    background:
+        rgba(
+            242,
+            181,
+            68,
+            0.12
+        );
+    border:
+        1px solid
+        rgba(
+            242,
+            181,
+            68,
+            0.20
+        );
+    border-radius: 14px;
+    padding:
+        14px
+        15px;
+}
+
+
+.single-product
+.aec-configurador
+.aec-special-field
+textarea {
+    background: #ffffff;
+    border:
+        1px solid
+        rgba(
+            34,
+            34,
+            34,
+            0.18
+        ) !important;
+    border-radius: 10px;
+    box-shadow: none !important;
+    font-size: 14px;
+    line-height: 1.45;
+    min-height: 76px;
+    padding:
+        10px
+        12px;
+    resize: vertical;
+}
+
+
+.single-product
+.aec-configurador
+.aec-special-field
+textarea:hover {
+    border-color:
+        rgba(
+            41,
+            76,
+            115,
+            0.55
+        ) !important;
+}
+
+
+.single-product
+.aec-configurador
+.aec-special-field
+textarea:focus {
+    border-color: #294c73 !important;
+    box-shadow:
+        0
+        0
+        0
+        3px
+        rgba(
+            41,
+            76,
+            115,
+            0.10
+        ) !important;
+    outline: none;
+}
+
+
+.single-product
+.aec-configurador
+.aec-character-help {
+    color: #81796f;
+    font-size: 11px;
+    margin-top: 5px;
+}
+
+
+/* =========================================================
+   PRECIO DINÁMICO
+   Agua fresca
+   ========================================================= */
+
+.single-product
+.aec-price-preview {
+    background:
+        rgba(
+            242,
+            181,
+            68,
+            0.15
+        );
+    border:
+        1px solid
+        rgba(
+            242,
+            181,
+            68,
+            0.32
+        );
+    border-radius: 10px;
+    font-size: 14px;
+    margin-top: 10px;
+    padding:
+        10px
+        12px;
+}
+
+
+/* =========================================================
+   CANTIDAD + AÑADIR
+   ========================================================= */
+
+.single-product
+form.cart
+> .quantity {
+    display: inline-flex !important;
+    margin:
+        0
+        8px
+        0
+        0 !important;
+    vertical-align: middle;
+}
+
+
+.single-product
+form.cart
+.quantity
+input.qty {
+    background: #ffffff;
+    border:
+        1px solid
+        rgba(
+            34,
+            34,
+            34,
+            0.18
+        ) !important;
+    border-radius: 12px;
+    color: #222222;
+    font-size: 15px;
+    font-weight: 800;
+    height: 48px;
+    min-height: 48px;
+    text-align: center;
+    width: 58px;
+}
+
+
+.single-product
+form.cart
+.single_add_to_cart_button {
+    background: #c63b32 !important;
+    border: 0 !important;
+    border-radius: 12px !important;
+    box-shadow:
+        0 7px 18px
+        rgba(
+            198,
+            59,
+            50,
+            0.17
+        ) !important;
+    color: #ffffff !important;
+    display: inline-flex !important;
+    font-size: 15px !important;
+    font-weight: 900 !important;
+    justify-content: center;
+    min-height: 48px;
+    padding:
+        13px
+        24px !important;
+    transition:
+        background-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+    vertical-align: middle;
+}
+
+
+.single-product
+form.cart
+.single_add_to_cart_button:hover {
+    background: #a9312a !important;
+    box-shadow:
+        0 10px 23px
+        rgba(
+            198,
+            59,
+            50,
+            0.24
+        ) !important;
+    opacity: 1 !important;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   META / CATEGORÍAS
+   ========================================================= */
+
+.single-product
+.product_meta {
+    color: #777068;
+    font-size: 12px;
+    margin-top: 20px;
+}
+
+
+.single-product
+.product_meta
+a {
+    color: #294c73;
+}
+
+
+/* =========================================================
+   TABS / INFORMACIÓN POSTERIOR
+   ========================================================= */
+
+.single-product
+.woocommerce-tabs,
+.single-product
+.related,
+.single-product
+.up-sells {
+    clear: both;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .single-product
+    div.product {
+        padding:
+            22px
+            20px
+            60px !important;
+    }
+
+
+    .single-product
+    div.product
+    .woocommerce-product-gallery {
+        position: static !important;
+        width: 43% !important;
+    }
+
+
+    .single-product
+    div.product
+    .summary {
+        width: 53% !important;
+    }
+
+
+    .single-product
+    .aec-configurador {
+        padding:
+            18px
+            17px;
+    }
+
+
+    .single-product
+    .aec-check-grid,
+    .single-product
+    .aec-radio-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 720px) {
+
+    .single-product
+    .woocommerce-breadcrumb {
+        font-size: 12px;
+        margin-top:
+            12px !important;
+        padding:
+            0
+            16px !important;
+    }
+
+
+    .single-product
+    .woocommerce-breadcrumb
+    a,
+    .single-product
+    .woocommerce-breadcrumb
+    .aec-breadcrumb-current {
+        font-size: 12px !important;
+    }
+
+
+    .single-product
+    div.product {
+        padding:
+            18px
+            16px
+            50px !important;
+    }
+
+
+    .single-product
+    div.product
+    .woocommerce-product-gallery,
+    .single-product
+    div.product
+    .summary {
+        float: none !important;
+        width: 100% !important;
+    }
+
+
+    .single-product
+    div.product
+    .woocommerce-product-gallery {
+        margin-bottom:
+            26px !important;
+        position: static !important;
+    }
+
+
+    .single-product
+    div.product
+    .summary {
+        padding-top: 0;
+    }
+
+
+    .single-product
+    div.product
+    .product_title {
+        font-size:
+            36px !important;
+    }
+
+
+    .single-product
+    div.product
+    .summary
+    .price {
+        font-size:
+            26px !important;
+    }
+
+
+    .single-product
+    .aec-configurador {
+        border-radius: 17px;
+        margin:
+            16px
+            0 !important;
+        padding:
+            17px
+            15px;
+    }
+
+
+    .single-product
+    .aec-configurador
+    h3 {
+        font-size: 22px;
+        margin-bottom: 18px;
+    }
+
+
+    .single-product
+    .aec-check-grid,
+    .single-product
+    .aec-radio-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .single-product
+    .aec-special-field
+    textarea {
+        min-height: 90px;
+    }
+
+
+    .single-product
+    form.cart
+    > .quantity {
+        margin:
+            0
+            8px
+            10px
+            0 !important;
+    }
+
+
+    .single-product
+    form.cart
+    .single_add_to_cart_button {
+        margin-bottom: 10px;
+    }
+
+}
+
+
+/* =========================================================
+   MÓVILES PEQUEÑOS
+   ========================================================= */
+
+@media (max-width: 430px) {
+
+    .single-product
+    form.cart
+    > .quantity {
+        margin:
+            0
+            0
+            10px !important;
+        width: 100%;
+    }
+
+
+    .single-product
+    form.cart
+    .quantity
+    input.qty {
+        width: 100%;
+    }
+
+
+    .single-product
+    form.cart
+    .single_add_to_cart_button {
+        width: 100%;
+    }
+
+}
+/* =========================================================
+   AJUSTE FINAL PRODUCTO
+   ========================================================= */
+
+/*
+ * Aprovechar mejor la columna de la fotografía.
+ */
+
+.single-product
+div.product
+.woocommerce-product-gallery {
+    width: 45% !important;
+}
+
+
+.single-product
+div.product
+.summary {
+    width: 51% !important;
+}
+
+
+.single-product
+.woocommerce-product-gallery__wrapper,
+.single-product
+.woocommerce-product-gallery__image,
+.single-product
+.woocommerce-product-gallery__image
+a {
+    display: block;
+    width: 100% !important;
+}
+
+
+.single-product
+.woocommerce-product-gallery__image
+img {
+    height: auto !important;
+    max-width: none !important;
+    width: 100% !important;
+}
+
+
+/*
+ * Ocultar información técnica que no necesita el cliente.
+ */
+
+.single-product
+.product_meta {
+    display: none !important;
+}
+
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .single-product
+    div.product
+    .woocommerce-product-gallery {
+        width: 44% !important;
+    }
+
+
+    .single-product
+    div.product
+    .summary {
+        width: 52% !important;
+    }
+
+}
+
+
+/* Móvil */
+
+@media (max-width: 720px) {
+
+    .single-product
+    div.product
+    .woocommerce-product-gallery,
+    .single-product
+    div.product
+    .summary {
+        width: 100% !important;
+    }
+
+}

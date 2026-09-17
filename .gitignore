@@ -1,0 +1,33 @@
+# =======	==================================================
+# ANTOJITOS EL CHINO
+# GITIGNORE
+# =========================================================
+
+# Variables y credenciales
+.env
+.env.*
+!.env.example
+
+# WordPress uploads generados localmente
+wp-content/uploads/
+
+# Cachés y temporales
+wp-content/cache/
+*.log
+*.tmp
+*.temp
+
+# Respaldos de desarrollo
+*.bak
+*.bak-*
+*.backup
+*~
+
+# Editor
+*.swp
+*.swo
+.vscode/
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db

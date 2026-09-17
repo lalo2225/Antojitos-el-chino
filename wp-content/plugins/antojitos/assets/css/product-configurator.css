@@ -1,0 +1,403 @@
+/* =========================================================
+   ANTOJITOS EL CHINO
+   CONFIGURADOR DE PRODUCTOS
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   CONTENEDOR PRINCIPAL
+   --------------------------------------------------------- */
+
+.aec-configurador {
+    background: #fffdf8;
+    border: 1px solid rgba(34, 34, 34, 0.10);
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin: 24px 0;
+    padding: 24px;
+}
+
+.aec-configurador h3 {
+    color: #222222;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin: 0 0 24px;
+}
+
+
+/* ---------------------------------------------------------
+   CAMPOS GENERALES
+   --------------------------------------------------------- */
+
+.aec-field {
+    margin-bottom: 24px;
+}
+
+.aec-field:last-child {
+    margin-bottom: 0;
+}
+
+.aec-field > label,
+.aec-field-title {
+    color: #222222;
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.aec-field-help {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+}
+
+
+/* ---------------------------------------------------------
+   SELECTS
+   --------------------------------------------------------- */
+
+.aec-field select {
+    appearance: none;
+    background-color: #ffffff;
+    border: 1px solid rgba(34, 34, 34, 0.18);
+    border-radius: 12px;
+    box-sizing: border-box;
+    color: #222222;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 16px;
+    min-height: 50px;
+    padding: 10px 42px 10px 14px;
+    width: 100%;
+}
+
+.aec-field select:hover {
+    border-color: rgba(198, 59, 50, 0.65);
+}
+
+.aec-field select:focus {
+    border-color: #c63b32;
+    box-shadow: 0 0 0 3px rgba(198, 59, 50, 0.10);
+    outline: none;
+}
+
+
+/* ---------------------------------------------------------
+   CHECKBOXES Y RADIOS
+   --------------------------------------------------------- */
+
+.aec-check-grid,
+.aec-radio-grid {
+    display: grid;
+    gap: 10px;
+    grid-template-columns:
+        repeat(auto-fit, minmax(150px, 1fr));
+}
+
+.aec-check-option,
+.aec-radio-option {
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid rgba(34, 34, 34, 0.12);
+    border-radius: 12px;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    min-height: 46px;
+    padding: 10px 14px;
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.aec-check-option:hover,
+.aec-radio-option:hover {
+    border-color: #c63b32;
+    transform: translateY(-1px);
+}
+
+.aec-check-option input,
+.aec-radio-option input {
+    accent-color: #c63b32;
+    cursor: pointer;
+    flex: 0 0 auto;
+    height: 18px;
+    margin: 0;
+    width: 18px;
+}
+
+.aec-check-option span,
+.aec-radio-option span {
+    color: #222222;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+
+/* ---------------------------------------------------------
+   CAMPO "¿QUIERES ALGO ESPECIAL?"
+   --------------------------------------------------------- */
+
+.aec-special-field {
+    background: #fff4df;
+    border-radius: 14px;
+    padding: 18px;
+}
+
+.aec-special-field textarea {
+    background: #ffffff;
+    border: 1px solid rgba(34, 34, 34, 0.18);
+    border-radius: 12px;
+    box-sizing: border-box;
+    color: #222222;
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.5;
+    min-height: 100px;
+    padding: 12px 14px;
+    resize: vertical;
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+    width: 100%;
+}
+
+.aec-special-field textarea:hover {
+    border-color: rgba(198, 59, 50, 0.65);
+}
+
+.aec-special-field textarea:focus {
+    border-color: #c63b32;
+    box-shadow: 0 0 0 3px rgba(198, 59, 50, 0.10);
+    outline: none;
+}
+
+.aec-special-field textarea::placeholder {
+    color: #888888;
+    opacity: 1;
+}
+
+.aec-character-help {
+    color: #777777;
+    display: block;
+    font-size: 12px;
+    line-height: 1.4;
+    margin-top: 6px;
+}
+
+
+/* ---------------------------------------------------------
+   PRECIO DINÁMICO DE AGUA FRESCA
+   --------------------------------------------------------- */
+
+.aec-price-preview {
+    background: #fff4df;
+    border: 1px solid rgba(242, 181, 68, 0.35);
+    border-radius: 10px;
+    color: #222222;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 14px;
+    padding: 12px 14px;
+}
+
+
+/* ---------------------------------------------------------
+   BOTÓN "ELEGIR" EN EL CATÁLOGO
+   --------------------------------------------------------- */
+
+.aec-elegir-producto {
+    background: #c63b32 !important;
+    border: none !important;
+    border-radius: 12px !important;
+    box-sizing: border-box;
+    color: #ffffff !important;
+    display: inline-block;
+    font-weight: 700 !important;
+    padding: 12px 18px !important;
+    text-align: center;
+    text-decoration: none !important;
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    width: 100%;
+}
+
+.aec-elegir-producto:hover {
+    color: #ffffff !important;
+    opacity: 0.92;
+    transform: translateY(-1px);
+}
+
+
+/* ---------------------------------------------------------
+   PRODUCTO INDIVIDUAL
+   --------------------------------------------------------- */
+
+.single-product .aec-configurador {
+    max-width: 680px;
+}
+
+.single-product
+.aec-configurador
++ form.cart {
+    margin-top: 20px;
+}
+
+
+/* ---------------------------------------------------------
+   CANTIDAD Y AGREGAR AL CARRITO
+   --------------------------------------------------------- */
+
+.single-product form.cart .quantity input.qty {
+    border: 1px solid rgba(34, 34, 34, 0.18);
+    border-radius: 10px;
+    box-sizing: border-box;
+    min-height: 46px;
+    padding: 8px;
+}
+
+.single-product form.cart .single_add_to_cart_button {
+    background: #c63b32 !important;
+    border: none !important;
+    border-radius: 12px !important;
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 700 !important;
+    min-height: 46px;
+    padding: 12px 22px !important;
+}
+
+.single-product
+form.cart
+.single_add_to_cart_button:hover {
+    opacity: 0.92;
+}
+
+
+/* ---------------------------------------------------------
+   DATOS PERSONALIZADOS EN CARRITO
+   --------------------------------------------------------- */
+
+.woocommerce-cart-form
+.wc-item-meta,
+.woocommerce-checkout
+.wc-item-meta {
+    font-size: 14px;
+    line-height: 1.5;
+    margin-top: 8px;
+}
+
+.woocommerce-cart-form
+.wc-item-meta
+li,
+.woocommerce-checkout
+.wc-item-meta
+li {
+    margin-bottom: 4px;
+}
+
+.woocommerce-cart-form
+.wc-item-meta
+strong,
+.woocommerce-checkout
+.wc-item-meta
+strong {
+    color: #222222;
+}
+
+
+/* ---------------------------------------------------------
+   TARJETAS DE PRODUCTOS
+   --------------------------------------------------------- */
+
+.woocommerce ul.products li.product {
+    box-sizing: border-box;
+}
+
+.woocommerce
+ul.products
+li.product
+.aec-elegir-producto {
+    margin-top: 10px;
+}
+
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 782px) {
+
+    .aec-configurador {
+        border-radius: 16px;
+        margin: 18px 0;
+        padding: 18px;
+    }
+
+    .aec-configurador h3 {
+        font-size: 22px;
+    }
+
+    .aec-check-grid,
+    .aec-radio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .aec-check-option,
+    .aec-radio-option {
+        min-height: 48px;
+    }
+
+    .aec-special-field {
+        padding: 15px;
+    }
+
+    .aec-special-field textarea {
+        font-size: 16px;
+        min-height: 110px;
+    }
+
+    .single-product form.cart {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .single-product form.cart .quantity {
+        margin: 0;
+    }
+
+    .single-product
+    form.cart
+    .single_add_to_cart_button {
+        flex: 1;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .aec-configurador {
+        padding: 16px;
+    }
+
+    .aec-field {
+        margin-bottom: 20px;
+    }
+
+    .aec-field select {
+        min-height: 48px;
+    }
+
+    .aec-special-field textarea {
+        min-height: 120px;
+    }
+}
