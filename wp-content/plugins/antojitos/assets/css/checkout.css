@@ -256,3 +256,250 @@ input[type="radio"] {
         width: 100%;
     }
 }
+/* =========================================================
+   ¿SE TE ANTOJA ALGO MAS?
+   REGRESO AL MENU DESDE CHECKOUT
+   ========================================================= */
+
+.woocommerce-checkout
+.aec-checkout-more-menu {
+    box-sizing: border-box;
+
+    width: 100%;
+
+    margin:
+        30px
+        0
+        8px;
+
+    padding: 0;
+}
+
+
+/* ---------------------------------------------------------
+   CONTENEDOR
+   --------------------------------------------------------- */
+
+.woocommerce-checkout
+.aec-checkout-more-menu__content {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 28px;
+
+    box-sizing: border-box;
+
+    width: 100%;
+
+    padding: 22px 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffaf1,
+            #fff3df
+        );
+
+    border:
+        1px solid
+        rgba(242, 181, 68, 0.38);
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 24px
+        rgba(34, 34, 34, 0.05);
+}
+
+
+/* ---------------------------------------------------------
+   TEXTO
+   --------------------------------------------------------- */
+
+.woocommerce-checkout
+.aec-checkout-more-menu__text {
+    min-width: 0;
+
+    flex: 1;
+}
+
+
+.woocommerce-checkout
+.aec-checkout-more-menu__eyebrow {
+    display: block;
+
+    margin-bottom: 6px;
+
+    color: #c63b32;
+
+    font-size: 11px;
+    font-weight: 900;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+
+.woocommerce-checkout
+.aec-checkout-more-menu__title {
+    margin:
+        0
+        0
+        7px;
+
+    color: #222222;
+
+    font-size: 21px;
+    font-weight: 900;
+
+    line-height: 1.2;
+}
+
+
+.woocommerce-checkout
+.aec-checkout-more-menu__description {
+    max-width: 540px;
+
+    margin: 0;
+
+    color: #625d57;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* ---------------------------------------------------------
+   BOTON
+   --------------------------------------------------------- */
+
+.woocommerce-checkout
+.aec-checkout-more-menu__button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+
+    min-height: 48px;
+
+    box-sizing: border-box;
+
+    padding:
+        12px
+        20px;
+
+    background: #294c73;
+
+    border:
+        1px solid
+        #294c73;
+
+    border-radius: 13px;
+
+    color: #ffffff !important;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    text-decoration: none !important;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+
+.woocommerce-checkout
+.aec-checkout-more-menu__button:hover {
+    background: #203d5c;
+
+    border-color: #203d5c;
+
+    color: #ffffff !important;
+
+    box-shadow:
+        0 7px 18px
+        rgba(41, 76, 115, 0.20);
+
+    transform:
+        translateY(-1px);
+}
+
+
+.woocommerce-checkout
+.aec-checkout-more-menu__button:focus-visible {
+    outline:
+        3px solid
+        rgba(41, 76, 115, 0.25);
+
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   MOVIL
+   ========================================================= */
+
+@media (max-width: 782px) {
+
+    .woocommerce-checkout
+    .aec-checkout-more-menu {
+        margin-top: 24px;
+    }
+
+
+    .woocommerce-checkout
+    .aec-checkout-more-menu__content {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 18px;
+
+        padding:
+            20px
+            18px;
+
+        border-radius: 16px;
+    }
+
+
+    .woocommerce-checkout
+    .aec-checkout-more-menu__title {
+        font-size: 20px;
+    }
+
+
+    .woocommerce-checkout
+    .aec-checkout-more-menu__description {
+        font-size: 14px;
+    }
+
+
+    .woocommerce-checkout
+    .aec-checkout-more-menu__button {
+        width: 100%;
+
+        min-height: 52px;
+
+        padding:
+            13px
+            18px;
+
+        font-size: 15px;
+    }
+}

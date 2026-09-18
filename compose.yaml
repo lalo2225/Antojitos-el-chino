@@ -53,7 +53,10 @@ services:
 
         if (
             isset($$_SERVER['HTTP_HOST']) &&
-            preg_match('/^[a-z0-9-]+\.trycloudflare\.com$/i', $$_SERVER['HTTP_HOST'])
+            (
+                preg_match('/^[a-z0-9-]+\.trycloudflare\.com$/i', $$_SERVER['HTTP_HOST']) ||
+                strtolower($$_SERVER['HTTP_HOST']) === 'around-evaluator-overreact.ngrok-free.dev'
+            )
         ) {
             define('WP_HOME', 'https://' . $$_SERVER['HTTP_HOST']);
             define('WP_SITEURL', 'https://' . $$_SERVER['HTTP_HOST']);

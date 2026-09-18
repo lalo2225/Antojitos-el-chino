@@ -1056,3 +1056,76 @@ add_action(
     'woocommerce_cart_emptied',
     'aec_limpiar_tipo_pedido_sesion'
 );
+/**
+ * ==========================================================
+ * BOTON "VOLVER AL MENU" EN CHECKOUT
+ * ==========================================================
+ *
+ * Carga únicamente la interfaz que permite regresar al menú
+ * antes de seleccionar/finalizar el pago.
+ *
+ * No modifica:
+ *
+ * - carrito
+ * - métodos de pago
+ * - Mercado Pago
+ * - transferencias
+ * - creación del pedido
+ * - Store API
+ */
+function aec_checkout_more_menu_assets()
+{
+    if (
+        !function_exists('is_checkout') ||
+        !is_checkout()
+    ) {
+        return;
+    }
+
+
+    /**
+     * No cargar después de completar un pedido.
+     */
+    if (
+        function_exists('is_order_received_page') &&
+        is_order_received_page()
+    ) {
+        return;
+    }
+
+
+    $relative_path =
+        'assets/js/checkout-more-menu.js';
+
+
+    $file_path =
+        dirname(__DIR__)
+        . '/'
+        . $relative_path;
+
+
+    $plugin_file =
+        dirname(__DIR__)
+        . '/antojitos.php';
+
+
+    wp_enqueue_script(
+        'aec-checkout-more-menu',
+        plugins_url(
+            $relative_path,
+            $plugin_file
+        ),
+        [],
+        file_exists($file_path)
+            ? filemtime($file_path)
+            : null,
+        true
+    );
+}
+
+
+add_action(
+    'wp_enqueue_scripts',
+    'aec_checkout_more_menu_assets',
+    35
+);
