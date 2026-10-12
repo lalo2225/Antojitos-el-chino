@@ -31,3 +31,4 @@ wp-content/cache/
 # Archivos del sistema
 .DS_Store
 Thumbs.db
+.idea/
